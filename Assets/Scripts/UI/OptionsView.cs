@@ -9,7 +9,5 @@ public class OptionsView : View
     public override void Init()
     {
         btn_atras.onClick.AddListener(() => controller.ShowLast());
-    }
-
-    
+    }    
 }
