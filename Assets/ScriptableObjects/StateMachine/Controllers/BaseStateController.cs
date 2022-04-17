@@ -35,6 +35,7 @@ public class BaseStateController : MonoBehaviour
     {
         _isActive = activate;
         pendingPushTransitions = new List<PendingPushTransition>();
+        OnExitState();
     }
 
     public void TransitionToState(State nextState)

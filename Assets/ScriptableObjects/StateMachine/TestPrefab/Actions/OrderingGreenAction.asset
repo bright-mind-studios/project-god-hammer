@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c7b8e8701508c4da771bb2c14c1e20, type: 3}
+  m_Name: OrderingGreenAction
+  m_EditorClassIdentifier: 
+  pushLaunchTransitions:
+  - demandState: {fileID: 11400000, guid: c83452afe9555a0408061ffe35bba5fe, type: 2}
+    pushedState: {fileID: 11400000, guid: b35845eb13994a74aa8c96098761b4fe, type: 2}
