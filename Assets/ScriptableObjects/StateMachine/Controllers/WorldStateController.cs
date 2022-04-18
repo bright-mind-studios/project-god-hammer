@@ -4,7 +4,15 @@ using UnityEngine;
 
 public class WorldStateController : BaseStateController
 {
+    [System.Serializable]
+    public struct WorldData
+    {
+        public DifficultyData difficulty;
+    }
+    public WorldData worldData;
+
     private VillageStateController[] _villageControllers;
+
 
     private void Start()
     {
@@ -14,10 +22,5 @@ public class WorldStateController : BaseStateController
         {
             villageController.InitializeStateMachine(true); // Maybe calling before the get for positioning and then passing through the village
         }
-    }
-
-    public VillageStateController GetVillage()
-    {
-        return _villageControllers[0];
     }
 }

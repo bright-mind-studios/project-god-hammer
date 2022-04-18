@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class VillageStateController : BaseStateController
 {
-    public VillageStats villageStats;
+    public VillageData villageData;
 
     [HideInInspector] public WorldStateController worldController; //maybe should hide it and find it on Awake
     [HideInInspector] public AudioSource audioSource;
