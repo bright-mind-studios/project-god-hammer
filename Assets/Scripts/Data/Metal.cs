@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Metal", menuName = "project-god-hammer/Metal", order = 2)]
-public class Metal : Resource
+public class Metal : Element
 {
     public enum Tier{
         low,
@@ -12,5 +12,11 @@ public class Metal : Resource
         special
     }
 
+    public enum State{
+        ore,
+        melt
+    }
+
     public Tier tier;
+    public State state;
 }
