@@ -7,11 +7,11 @@ public class TimeToAttackDecision : Decision
 {
     public override bool Decide(BaseStateController controller)
     {
-        return TimeToAttack(controller);
+        return TimeToAttack((WorldStateController) controller);
     }
 
-    private bool TimeToAttack(BaseStateController controller)
+    private bool TimeToAttack(WorldStateController controller)
     {
-        return false;
+        return controller.HasTimeElapsed(controller.worldData.intensity.secondsBetweenAttacks) || controller.worldData.activeRequests == 0;
     }
 }

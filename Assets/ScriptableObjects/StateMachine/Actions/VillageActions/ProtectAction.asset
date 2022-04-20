@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c96c33831c2e534cbad9a7087aef9cd, type: 3}
   m_Name: ProtectAction
   m_EditorClassIdentifier: 
-  pushLaunchTransitions: []
+  pushLaunchTransitions:
+  - demandState: {fileID: 11400000, guid: 6a7619452a6e6654f90ea1bad1d28ccb, type: 2}
+    pushedState: {fileID: 11400000, guid: 6b0ea9ccc71b8874797eb46990726fcb, type: 2}

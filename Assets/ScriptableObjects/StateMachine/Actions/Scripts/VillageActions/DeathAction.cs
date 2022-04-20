@@ -7,13 +7,20 @@ public class DeathAction : Action
 {
     public override void Act(BaseStateController controller)
     {
-        Death(controller);
+        Death((VillageStateController) controller);
     }
 
-    private void Death(BaseStateController controller)
+    private void Death(VillageStateController controller)
     {
-        // Change armoured bar to broken
+        if (controller.stateBoolVariable) return;
+
+        Debug.Log("Death");
+        // Delete armour bar and change village Sprite to Death one
+        controller.armourBar.Disable();
         // Play death sound
         // Inform world to delete this village
+        WorldStatus status = new WorldStatus(controller.gameObject, true);
+        controller.worldController.FromStatePushTransitionToState(pushLaunchTransitions[0].demandState, pushLaunchTransitions[0].pushedState, false, status);
+        controller.stateBoolVariable = true;
     }
 }

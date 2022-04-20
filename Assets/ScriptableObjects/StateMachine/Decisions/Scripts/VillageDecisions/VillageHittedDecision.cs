@@ -7,12 +7,12 @@ public class VillageHittedDecision : Decision
 {
     public override bool Decide(BaseStateController controller)
     {
-        return HasBeenAttacked(controller);
+        return HasBeenAttacked((VillageStateController) controller);
     }
 
-    private bool HasBeenAttacked(BaseStateController controller)
+    private bool HasBeenAttacked(VillageStateController controller)
     {
-        controller.HasTimeElapsed(300); // Think how to define the time to wait
-        return false;
+        int waveSeconds = controller.worldController.worldData.difficulty.secondsPerSection * controller.villageData.fortificationLevel;
+        return controller.HasTimeElapsed(waveSeconds);
     }
 }

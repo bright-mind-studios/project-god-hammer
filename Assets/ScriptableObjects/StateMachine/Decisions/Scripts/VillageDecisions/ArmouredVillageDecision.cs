@@ -7,11 +7,11 @@ public class ArmouredVillageDecision : Decision
 {
     public override bool Decide(BaseStateController controller)
     {
-        return IsVillageArmoured(controller);
+        return IsVillageArmoured((VillageStateController) controller);
     }
 
-    private bool IsVillageArmoured(BaseStateController controller)
+    private bool IsVillageArmoured(VillageStateController controller)
     {
-        return false;
+        return controller.villageData.fortificationLevel > controller.worldController.worldData.difficulty.armouredSections;
     }
 }

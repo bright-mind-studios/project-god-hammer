@@ -12,6 +12,9 @@ public class LoseAction : Action
 
     private void Lose(BaseStateController controller)
     {
+        if (controller.stateBoolVariable) return;
 
+        Debug.Log("END GAME");
+        controller.stateBoolVariable = true;
     }
 }

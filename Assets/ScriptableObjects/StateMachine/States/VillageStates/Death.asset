@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade36a4bee4791249b89300fdc0ce869, type: 3}
   m_Name: Death
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: 10e3bac0bfe226e42b9315238421a73c, type: 2}
   transitions: []

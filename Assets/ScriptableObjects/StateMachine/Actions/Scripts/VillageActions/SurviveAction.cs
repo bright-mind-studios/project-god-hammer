@@ -7,11 +7,12 @@ public class SurviveAction : Action
 {
     public override void Act(BaseStateController controller)
     {
-        Survive(controller);
+        Survive((VillageStateController) controller);
     }
 
-    private void Survive(BaseStateController controller)
+    private void Survive(VillageStateController controller)
     {
-        // Decrease bar
+        // Decrease bar - Calling Reduce from ArmourBar passing as argument time.deltaTime
+        controller.armourBar.ReduceArmourBySeconds(Time.deltaTime);
     }
 }

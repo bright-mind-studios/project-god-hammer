@@ -7,12 +7,15 @@ public class LiveAction : Action
 {
     public override void Act(BaseStateController controller)
     {
-        Live(controller);
+        Live((VillageStateController) controller);
     }
 
-    private void Live(BaseStateController controller)
+    private void Live(VillageStateController controller)
     {
+        if (controller.stateBoolVariable) return;
+
         // Put quietly sound
-        // Fullfil armoured bar to proper section - ScriptableObject with config settings (including max succeess needed for reaching protected state)
+        controller.armourBar.SetSecondsOfArmour(controller.worldController.worldData.difficulty.secondsPerSection * controller.villageData.fortificationLevel);
+        controller.stateBoolVariable = true;
     }
 }

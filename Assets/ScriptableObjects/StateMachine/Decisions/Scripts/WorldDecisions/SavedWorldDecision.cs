@@ -7,11 +7,11 @@ public class SavedWorldDecision : Decision
 {
     public override bool Decide(BaseStateController controller)
     {
-        return SavedWorld(controller);
+        return SavedWorld((WorldStateController) controller);
     }
 
-    private bool SavedWorld(BaseStateController controller)
+    private bool SavedWorld(WorldStateController controller)
     {
-        return false;
+        return controller.VillagesCount > 0;
     }
 }

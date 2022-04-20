@@ -16,5 +16,6 @@ public class ConcernAction : Action
         // Send the petition generated to world list
         // Generate trigger for weapon
         // Change music to attack state
+        Debug.Log("Generating Weapon");
     }
 }

@@ -12,6 +12,6 @@ public class WaitAction : Action
 
     private void Wait(BaseStateController controller)
     {
-
+        //Not use assigned
     }
 }

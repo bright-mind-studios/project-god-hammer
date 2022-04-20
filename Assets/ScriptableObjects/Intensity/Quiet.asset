@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 805682eeec5d26a4490a69000e0eb3d4, type: 3}
-  m_Name: DeathAction
+  m_Script: {fileID: 11500000, guid: fa6677f5ac51c754f80633b7c9bf629d, type: 3}
+  m_Name: Quiet
   m_EditorClassIdentifier: 
-  pushLaunchTransitions:
-  - demandState: {fileID: 11400000, guid: 6a7619452a6e6654f90ea1bad1d28ccb, type: 2}
-    pushedState: {fileID: 11400000, guid: 6b0ea9ccc71b8874797eb46990726fcb, type: 2}
+  villagesLives: 3
+  secondsBetweenAttacks: 240

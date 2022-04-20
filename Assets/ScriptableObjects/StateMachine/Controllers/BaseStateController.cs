@@ -2,22 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class Status
+{
+    private GameObject _id;
+    public GameObject Id { get { return _id; } private set { _id = value; } }
+
+    public Status(){}
+    public Status(GameObject id)
+    {
+        Id = id;
+    }
+}
+
+
 public class BaseStateController : MonoBehaviour
 {
     public State currentState;
 
     [HideInInspector] public bool stateBoolVariable; // Allows to convert an State from Moore FSM to Mealy FSM
     [HideInInspector] public float stateTimeElapsed; // Internal timer for state's personnal use
+    [HideInInspector] public Status activeStatus;
 
     private struct PendingPushTransition
     {
         public State demandState;
         public State pushedState;
+        public Status status;
 
-        public PendingPushTransition(State demandState, State pushedState)
+        public PendingPushTransition(State demandState, State pushedState, Status status)
         {
             this.demandState = demandState;
             this.pushedState = pushedState;
+            this.status = status;
         }
     }
     private bool _isActive;
@@ -47,16 +63,17 @@ public class BaseStateController : MonoBehaviour
         }
     }
 
-    public void FromStatePushTransitionToState(State demandState, State pushedState, bool disposable)
+    public void FromStatePushTransitionToState(State demandState, State pushedState, bool disposable, Status status = null)
     {
         if (demandState == currentState && pushedState != null)
         {
             currentState = pushedState;
+            activeStatus = status;
             OnExitState();
         }
         else if (!disposable && pushedState != null)
         {
-            pendingPushTransitions.Add(new PendingPushTransition(demandState, pushedState));
+            pendingPushTransitions.Add(new PendingPushTransition(demandState, pushedState, status));
         }
     }
 
@@ -77,26 +94,26 @@ public class BaseStateController : MonoBehaviour
 
     private void OnPendingPushTransitions()
     {
-        List<int> completedPushTransitions =  new List<int>();
+        List<PendingPushTransition> nonCompleted = new List<PendingPushTransition>();
 
         for (int i = 0; i < pendingPushTransitions.Count; i++)
         {
             PendingPushTransition transition = pendingPushTransitions[i];
             if (transition.demandState == currentState)
             {
-                completedPushTransitions.Add(i);
                 TransitionToState(transition.pushedState);
+                activeStatus = transition.status;
                 currentState.UpdateState(this);
+            } else
+            {
+                nonCompleted.Add(transition);
             }
         }
 
-        foreach (var transitionIdx in completedPushTransitions)
-        {
-            pendingPushTransitions.RemoveAt(transitionIdx);
-        }
+        pendingPushTransitions = nonCompleted;
     }
 
-    private void OnExitState()
+    protected virtual void OnExitState()
     {
         stateBoolVariable = false;
         stateTimeElapsed = 0;

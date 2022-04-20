@@ -7,11 +7,11 @@ public class EndOfGameDecision : Decision
 {
     public override bool Decide(BaseStateController controller)
     {
-        return EndOfGame(controller);
+        return EndOfGame((WorldStateController) controller);
     }
 
-    private bool EndOfGame(BaseStateController controller)
+    private bool EndOfGame(WorldStateController controller)
     {
-        return false;
+        return controller.VillagesCount <= 0;
     }
 }

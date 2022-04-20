@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e20ba8c994b0bc648a5b2f831a941779, type: 3}
   m_Name: Normal
   m_EditorClassIdentifier: 
-  armouredSections: 0
-  secondsPerSection: 0
+  villagesAmount: 3
+  armouredSections: 3
+  secondsPerSection: 60
   failRateMultiplier: 0

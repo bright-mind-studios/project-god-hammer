@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ade36a4bee4791249b89300fdc0ce869, type: 3}
   m_Name: Protected
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: 6f2fb31545bf21347b7632362554ba45, type: 2}
   transitions: []

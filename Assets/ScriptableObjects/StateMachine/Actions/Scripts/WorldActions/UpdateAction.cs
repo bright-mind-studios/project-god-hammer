@@ -7,11 +7,26 @@ public class UpdateAction : Action
 {
     public override void Act(BaseStateController controller)
     {
-        UpdateStatus(controller);
+        UpdateStatus((WorldStateController) controller);
     }
 
-    private void UpdateStatus(BaseStateController controller)
+    private void UpdateStatus(WorldStateController controller)
     {
+        if (controller.stateBoolVariable) return;
 
+        WorldStatus status = (WorldStatus) controller.activeStatus;
+
+        if (status != null)
+        {
+            controller.DeleteVillage(status.Id.GetComponent<VillageStateController>());
+
+            if (status.DeathVillage) controller.worldData.aliveVillages--;
+        }
+        else
+        {
+            controller.worldData.activeRequests--;
+        }
+
+        controller.stateBoolVariable = true;
     }
 }
