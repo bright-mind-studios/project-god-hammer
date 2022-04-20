@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31552598a39a62468bd757b86355f92, type: 3}
+  m_Name: Duraluminio
+  m_EditorClassIdentifier: 
+  itemname: Duralumino
+  prefab: {fileID: 0}
+  sprite: {fileID: 0}
+  alloyings:
+  - {fileID: 11400000, guid: df4b02aa79f2a8d48a2a6adae3c2b889, type: 2}
+  - {fileID: 11400000, guid: ecdabd2bae739434d8bc7c56c68b3589, type: 2}
