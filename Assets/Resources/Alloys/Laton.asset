@@ -15,7 +15,6 @@ MonoBehaviour:
   itemname: Laton
   prefab: {fileID: 0}
   sprite: {fileID: 0}
-  tier: 0
   alloyings:
-  - {fileID: 11400000, guid: 164b88d4397418f4580616ec7540f745, type: 2}
+  - {fileID: 11400000, guid: ecdabd2bae739434d8bc7c56c68b3589, type: 2}
   - {fileID: 11400000, guid: bfb20a9f64124bf419b5719ccc67dc02, type: 2}

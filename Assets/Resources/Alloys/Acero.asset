@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31552598a39a62468bd757b86355f92, type: 3}
   m_Name: Acero
   m_EditorClassIdentifier: 
-  itemname: 
+  itemname: Acero
   prefab: {fileID: 0}
   sprite: {fileID: 0}
-  tier: 0
-  alloyings: []
+  alloyings:
+  - {fileID: 11400000, guid: 8c235d1f9a820d64db799110d05a98ba, type: 2}
+  - {fileID: 11400000, guid: 353a21cb334bed44ab5e3d2e5baf091a, type: 2}

@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31552598a39a62468bd757b86355f92, type: 3}
   m_Name: Peltre
   m_EditorClassIdentifier: 
-  itemname: 
+  itemname: Peltre
   prefab: {fileID: 0}
   sprite: {fileID: 0}
-  tier: 0
-  alloyings: []
+  alloyings:
+  - {fileID: 11400000, guid: ecdabd2bae739434d8bc7c56c68b3589, type: 2}
+  - {fileID: 11400000, guid: 9556d1d7bbea3b84391033f914312183, type: 2}

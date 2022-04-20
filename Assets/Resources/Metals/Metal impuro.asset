@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e8574366cd76244916d8b27c009078, type: 3}
   m_Name: Metal impuro
   m_EditorClassIdentifier: 
-  itemname: Metal imputo
+  itemname: Metal impuro
   prefab: {fileID: 0}
   sprite: {fileID: 0}
   tier: 3
+  state: 0

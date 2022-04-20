@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31552598a39a62468bd757b86355f92, type: 3}
   m_Name: Metal de field
   m_EditorClassIdentifier: 
-  itemname: 
+  itemname: Metal de field
   prefab: {fileID: 0}
   sprite: {fileID: 0}
-  tier: 0
-  alloyings: []
+  alloyings:
+  - {fileID: 11400000, guid: 164b88d4397418f4580616ec7540f745, type: 2}
+  - {fileID: 11400000, guid: bfb20a9f64124bf419b5719ccc67dc02, type: 2}

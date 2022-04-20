@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98e8574366cd76244916d8b27c009078, type: 3}
   m_Name: Hierro
   m_EditorClassIdentifier: 
-  itemname: "Esta\xF1o"
+  itemname: Hierro
   prefab: {fileID: 0}
   sprite: {fileID: 0}
-  tier: 0
+  tier: 1
+  state: 0

@@ -12,11 +12,5 @@ public class Metal : Element
         special
     }
 
-    public enum State{
-        ore,
-        melt
-    }
-
     public Tier tier;
-    public State state;
 }

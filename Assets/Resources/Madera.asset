@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f202fea0035aef4680052911bd2f479, type: 3}
   m_Name: Madera
   m_EditorClassIdentifier: 
-  itemname: 
+  itemname: Madera
   prefab: {fileID: 0}
   sprite: {fileID: 0}
