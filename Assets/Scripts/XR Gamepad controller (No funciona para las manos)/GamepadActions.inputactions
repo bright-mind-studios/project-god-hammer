@@ -1,0 +1,86 @@
+{
+    "name": "GamepadActions",
+    "maps": [
+        {
+            "name": "Main",
+            "id": "d977badb-7d3f-4a41-ac46-1dbda8e635aa",
+            "actions": [
+                {
+                    "name": "Main move",
+                    "type": "Value",
+                    "id": "6363c338-c8fb-449b-84f6-8b729f5dc813",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Right move",
+                    "type": "Value",
+                    "id": "24b25577-6790-477e-aee8-cd6f64291000",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Left move",
+                    "type": "Value",
+                    "id": "f72cacd2-c540-4640-a200-9d781d8ac40f",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e7891400-7d62-495e-8195-ba18781ad6cd",
+                    "path": "<Gamepad>/dpad",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamepad",
+                    "action": "Main move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "422c5cfd-6aa7-47b2-9c84-5af0ad937680",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamepad",
+                    "action": "Right move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ac22731d-be1e-40f8-b757-73e81b89c3e3",
+                    "path": "<Gamepad>/leftStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "gamepad",
+                    "action": "Left move",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "gamepad",
+            "bindingGroup": "gamepad",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
