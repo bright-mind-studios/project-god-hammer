@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponShape", menuName = "project-god-hammer/WeaponShape", order = 4)]
 public class WeaponShape : ScriptableObject
 {
-    public List<Vector2> points;
+    public List<Vector3> points;
 }
