@@ -6,9 +6,7 @@ using UnityEngine;
 public class RayCutterInteractable : GrabInteractable
 {
     private LineRenderer rayRenderer;
-
-    [Tooltip("Capa de colision del rayo (mold)")] 
-    [SerializeField] private LayerMask raycastMask;
+    private LayerMask raycastMask;
     [SerializeField] private float maxdistance = 0.4f;
     [SerializeField] Mold mold;
 
@@ -25,7 +23,6 @@ public class RayCutterInteractable : GrabInteractable
     {
         base.OnTriggerStart();
         rayRenderer.enabled = true;
-
     }
     public override void OnTriggerEnd()
     {
@@ -47,5 +44,13 @@ public class RayCutterInteractable : GrabInteractable
                 rayRenderer.SetPosition(1, Vector3.down);
             }
         }
+    }
+
+    private void InitBeam()
+    {
+        rayRenderer.enabled = false;
+        rayRenderer.useWorldSpace = false;
+        rayRenderer.positionCount = 2;
+        rayRenderer.SetPosition(0, Vector3.down);
     }
 }

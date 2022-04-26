@@ -7,19 +7,19 @@ public abstract class WorkStation : Station
     public readonly static int inputSize = 1;       // Items máximos de entrada
     [SerializeField] private InputZone inputZone;   
     [SerializeField] private OutputZone outputZone;      
-    public List<ResourceItem<Resource>> store;                        // Objetos dentro de la estación
+    public List<ResourceItem> store;                        // Objetos dentro de la estación
     
     protected void TriggerInputZone(bool active)
     {
         inputZone.gameObject.SetActive(active);
     }
 
-    private void OnEnable() 
+    public void OnEnable() 
     {
         inputZone.OnTakeResource += OnTakeInputResource;
     }
 
-    private void OnDisable() 
+    public void OnDisable() 
     {
         inputZone.OnTakeResource -= OnTakeInputResource;
     }
@@ -38,8 +38,8 @@ public abstract class WorkStation : Station
     public abstract bool IsValidResource(Resource resource);
     public abstract void ProcessResource(Resource resource);
 
-    public void ReleaseOutputResource(Resource resource)
+    public void ReleaseOutputResource(Resource resource, float scale = 1f)
     {
-        outputZone.OutputResourceItem(resource);
+        outputZone.OutputResourceItem(resource, scale);
     }    
 }

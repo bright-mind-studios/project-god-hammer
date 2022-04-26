@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class TouchInteractable : XRSimpleInteractable, IBaseInteractable
+public abstract class TouchInteractable : XRSimpleInteractable, IBaseInteractable
 {
     private bool _grip, _trigger;
     public bool IsOnGrip { get => _grip; set => _grip = value; }
@@ -11,6 +11,7 @@ public class TouchInteractable : XRSimpleInteractable, IBaseInteractable
 
     protected override void Awake() {
         base.Awake();
+        Init();
     }
     protected override void OnEnable() {
         base.OnEnable();
@@ -23,6 +24,8 @@ public class TouchInteractable : XRSimpleInteractable, IBaseInteractable
         hoverEntered.RemoveAllListeners();
         hoverExited.RemoveAllListeners();
     }
+
+    protected virtual void Init() {}
 
     public virtual void OnHoverEnter(HoverEnterEventArgs args) {}
     public virtual void OnHoverExit(HoverExitEventArgs args) {}

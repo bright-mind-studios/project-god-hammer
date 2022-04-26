@@ -53,6 +53,7 @@ public class InteractionController : MonoBehaviour
     private void PressGrip(XRDirectInteractor interactor)
     {
         //Debug.Log("Press Grip");
+        if(interactor == null) return;
         interactor.interactablesHovered.ForEach(
             (IXRHoverInteractable i) => {               
                 if (i is IBaseInteractable b) 
@@ -64,6 +65,7 @@ public class InteractionController : MonoBehaviour
     private void ReleaseGrip(XRDirectInteractor interactor)
     {
         //Debug.Log("Release grip");
+        if(interactor == null) return;
         interactor.interactablesHovered.ForEach(
             (IXRHoverInteractable i) => {               
                 if (i is IBaseInteractable b) 
@@ -75,6 +77,7 @@ public class InteractionController : MonoBehaviour
     private void PressTrigger(XRDirectInteractor interactor)
     {
         //Debug.Log("Press trigger");
+        if(interactor == null) return;
         interactor.interactablesHovered.ForEach(
             (IXRHoverInteractable i) => {               
                 if (i is IBaseInteractable b) 
@@ -86,6 +89,7 @@ public class InteractionController : MonoBehaviour
     private void ReleaseTrigger(XRDirectInteractor interactor)
     {
         //Debug.Log("Release trigger");
+        if(interactor == null) return;
         interactor.interactablesHovered.ForEach(
             (IXRHoverInteractable i) => {               
                 if (i is IBaseInteractable b) 

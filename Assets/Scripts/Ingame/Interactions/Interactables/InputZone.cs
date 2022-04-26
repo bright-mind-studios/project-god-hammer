@@ -7,10 +7,11 @@ using UnityEngine;
 public class InputZone : MonoBehaviour
 {    
     public event Action<Resource> OnTakeResource; 
-    private void OntriggerEnter(Collider other) {
-        ResourceItem<Resource> item = other.gameObject.GetComponent<ResourceItem<Resource>>();
+    private void OnTriggerEnter(Collider other) {        
+        ResourceItem item = other.gameObject.GetComponent<ResourceItem>();
         if(item != null)
         {
+            Debug.Log("AAA");
             OnTakeResource?.Invoke(item.resource);
             Destroy(other.gameObject);
         }
