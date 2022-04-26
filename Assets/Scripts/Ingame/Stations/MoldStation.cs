@@ -7,7 +7,7 @@ public class MoldStation : WorkStation
     [SerializeField] private List<WeaponShape> shapes;
     [SerializeField] private int currentType;
     [SerializeField] private int currentShape;
-    [SerializeField] private MoldInteractable mold;   
+    [SerializeField] private Mold mold;   
     [SerializeField] private RayCutterInteractable rayCutter; 
     [SerializeField] private int shapesPerType = 2;
     private void Start() 
@@ -30,6 +30,15 @@ public class MoldStation : WorkStation
         mold.renderTemplateShape(shapes[id].points.ToArray());       
     }
 
+    public override bool IsValidResource(Resource resource)
+    {
+        return resource is Metal;
+    }
 
-    
+    public override void ProcessResource(Resource resource)
+    {
+        TriggerInputZone(false);
+        // Generar el arma con el molde
+        //ReleaseOutputResource(...)
+    }   
 }
