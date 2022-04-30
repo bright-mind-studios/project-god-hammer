@@ -5,8 +5,8 @@ using UnityEngine;
 public abstract class WorkStation : Station
 {
     public readonly static int inputSize = 1;       // Items máximos de entrada
-    [SerializeField] private InputZone inputZone;   
-    [SerializeField] private OutputZone outputZone;      
+    [SerializeField] public InputZone inputZone;   
+    [SerializeField] public OutputZone outputZone;      
     public List<ResourceItem> store;                        // Objetos dentro de la estación
     
     protected void TriggerInputZone(bool active)
@@ -23,15 +23,17 @@ public abstract class WorkStation : Station
     {
         inputZone.OnTakeResource -= OnTakeInputResource;
     }
-    public void OnTakeInputResource(Resource resource)
+    public bool OnTakeInputResource(Resource resource)
     {
         if(IsValidResource(resource))
         {
             ProcessResource(resource);
+            return true;
         }
         else
         {
             ReleaseOutputResource(resource);
+            return false;
         }
     }
 

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,11 +12,20 @@ public class Mold : MonoBehaviour
     private WeaponShape currentShape;
     public bool completed;
 
+    public event Action<bool> OnChangeState; 
+
     public int lastPointIdx, currentPointIdx;
+
+    private void Start() 
+    {
+        completed = false;
+        OnChangeState?.Invoke(completed);
+    }
 
     private void ResetMold()
     {
         completed = false;
+        OnChangeState?.Invoke(completed);
         lastPointIdx = currentPointIdx = 0;
         guide.MoveTarget(currentShape.points[currentPointIdx]);
     }
@@ -47,7 +57,10 @@ public class Mold : MonoBehaviour
         }
     }
 
-    public void OnCutterStop() => ResetMold();
+    public void OnCutterStop()
+    {
+        if(!completed) ResetMold();
+    }
 
     private void UpdatePoint()
     {
@@ -56,6 +69,7 @@ public class Mold : MonoBehaviour
         if(currentPointIdx >= currentShape.points.Count)
         {
             completed = true;
+            OnChangeState?.Invoke(completed);
             guide.Trigger(false);
         }
         else{
