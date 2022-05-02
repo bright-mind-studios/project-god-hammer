@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89bf7d42d6d0bba41bc523eba211633f, type: 3}
+  m_Name: WaitAction
+  m_EditorClassIdentifier: 
+  pushLaunchTransitions:
+  - demandState: {fileID: 11400000, guid: 2d79872c6b0c5fe43b2d79aaf8b6a276, type: 2}
+    pushedState: {fileID: 11400000, guid: 3b28ee4e5c158c841b790424f2713c3b, type: 2}
