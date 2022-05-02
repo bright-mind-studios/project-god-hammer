@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5c439a17d05394469e11a63f7df2baf, type: 3}
-  m_Name: Stone
+  m_Name: Village
   m_EditorClassIdentifier: 
-  name: Stone
-  prefab: {fileID: 909881928537339395, guid: 5408bdc3a41a0c74da046350cbaaad39, type: 3}
-  spawnChance: 0.31416
-  priority: 3
+  name: Village
+  prefab: {fileID: 7655564899459497897, guid: 691991941dc754347b21acbd0859411c, type: 3}
+  spawnChance: 1
+  priority: 5

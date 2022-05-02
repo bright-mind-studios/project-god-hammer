@@ -17,41 +17,48 @@ public class WorldStatus : Status
 
 public class WorldStateController : BaseStateController
 {
-    [System.Serializable]
     public struct WorldData
     {
         public DifficultyData difficulty;
         public IntensityData intensity;
-        [HideInInspector] public int activeRequests;
-        [HideInInspector] public int aliveVillages;
+        public int activeRequests;
+        public int aliveVillages;
     }
-    public GameObject villagePrefab;
+    public EnvironmentEntity villageEntity;
     public WorldData worldData;
 
     private List<VillageStateController> _villageControllers;
     public int VillagesCount{get{ return _villageControllers.Count; } private set{ }}
 
-
-    private void Awake()
+    public void Initialize(DifficultyData difficulty, IntensityData intensity)
     {
-        GameObject villages = new GameObject("Villages");
-        _villageControllers = new List<VillageStateController>();
-
-        for (int i = 1; i <= worldData.difficulty.villagesAmount; i++)
+        worldData = new WorldData
         {
-            GameObject village = Instantiate(villagePrefab, new Vector3(0 + 3*(i-1),0,0), Quaternion.identity, villages.transform); // Change this to 0,0,0 when finished location system
-            _villageControllers.Add(village.GetComponent<VillageStateController>());
-        }
-    }
+            difficulty = difficulty,
+            intensity = intensity
+        };
 
-    private void Start()
-    {
+        GenerateVillages();
+
         foreach (var villageController in _villageControllers)
         {
             villageController.InitializeStateMachine(true);
         }
 
         InitializeStateMachine(true);
+    }
+
+    private void GenerateVillages()
+    {
+        GridManager gridManager = FindObjectOfType<GridManager>();
+
+        _villageControllers = new List<VillageStateController>();
+
+        for (int i = 1; i <= worldData.difficulty.villagesAmount; i++)
+        {
+            GameObject village = gridManager.PlaceEntity(villageEntity); //Instantiate(villagePrefab, new Vector3(0 + 3*(i-1),0,0), Quaternion.identity, villages.transform); // Change this to 0,0,0 when finished location system
+            _villageControllers.Add(village.GetComponent<VillageStateController>());
+        }
     }
 
     public override void InitializeStateMachine(bool activate)

@@ -317,6 +317,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 4d7d4a00a93111049be88785b2872e68, type: 2}
   _environmentEntities:
   - {fileID: 11400000, guid: 31648708b0e76554d9804fda8b3d8776, type: 2}
+  _entityProb:
+  - 0.2
 --- !u!4 &797348853
 Transform:
   m_ObjectHideFlags: 0
@@ -329,7 +331,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:

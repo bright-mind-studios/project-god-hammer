@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5c439a17d05394469e11a63f7df2baf, type: 3}
-  m_Name: Stone
+  m_Name: Tree
   m_EditorClassIdentifier: 
-  name: Stone
-  prefab: {fileID: 909881928537339395, guid: 5408bdc3a41a0c74da046350cbaaad39, type: 3}
-  spawnChance: 0.31416
-  priority: 3
+  name: Tree
+  prefab: {fileID: 3033950264528817972, guid: 5da1fdc2bf90a0845a609f3600b43e23, type: 3}
+  spawnChance: 0.324
