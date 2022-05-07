@@ -8,7 +8,7 @@ public class Billboard : MonoBehaviour
 
     private void Awake()
     {
-        cam = FindObjectOfType<Camera>().transform;
+        cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
     }
 
     void LateUpdate()

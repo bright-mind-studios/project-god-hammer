@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Stone
   m_EditorClassIdentifier: 
   name: Stone
-  prefab: {fileID: 909881928537339395, guid: 5408bdc3a41a0c74da046350cbaaad39, type: 3}
-  spawnChance: 0.31416
-  priority: 3
+  resourceProvider: 1
+  spawnChance: 0.173
+  localScale: {x: 0.5, y: 0.2, z: 0.5}
+  localPosition: {x: 1.84, y: 0, z: 3.11}
+  prefab: {fileID: 830885419833549530, guid: e8e7d2604cda6f847a08e92a0246e7bb, type: 3}
+  mapSprite: {fileID: 21300000, guid: 4cbdd7fb3a50c7e49aa31561d236f4d3, type: 3}
+  placeholderColor: {r: 1, g: 0, b: 0, a: 0}
