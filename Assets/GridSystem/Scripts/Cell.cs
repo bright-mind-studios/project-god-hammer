@@ -26,7 +26,7 @@ public class Cell : MonoBehaviour
         // Minimap Icon
         GameObject iconMinimap = new GameObject("MinimapIcon");
         iconMinimap.transform.SetParent(parent.transform, true);
-        iconMinimap.layer = LayerMask.NameToLayer("MinimapGrid");
+        iconMinimap.layer = LayerMask.NameToLayer("Minimap");
         iconMinimap.transform.localScale = new Vector3(1f * _cellSize/3, 1f * _cellSize/3, 1f);
         iconMinimap.transform.Rotate(-90f, 0f, 0f, Space.World);
         iconMinimap.transform.position = new Vector3(parent.transform.position.x, GameObject.FindGameObjectWithTag("MinimapCamera").transform.position.y-1f, parent.transform.position.z);

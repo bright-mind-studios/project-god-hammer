@@ -20,6 +20,9 @@ public class GridManager : MonoBehaviour
     private int _nonSpawnableCells;
     private HashSet<int> _availableIndexes;
 
+    public int CellSize { get { return _cellSize; } private set { } }
+    public int WorldRadius { get { return _worldRadius; } private set { } }
+
     public void Initialize(int nonSpawnableCells)
     {
         int worldSize;
@@ -133,10 +136,10 @@ public class GridManager : MonoBehaviour
         iconMinimap.layer = LayerMask.NameToLayer("MinimapGrid");
         iconMinimap.transform.localScale = new Vector3(1f * _cellSize, 1f * _cellSize, 1f);
         iconMinimap.transform.Rotate(-90f, 0f, 0f, Space.World);
-        iconMinimap.transform.position = new Vector3(iconMinimap.transform.position.x, -0.12f, iconMinimap.transform.position.z);
+        iconMinimap.transform.position = new Vector3(iconMinimap.transform.position.x, GameObject.FindGameObjectWithTag("MinimapCamera").transform.position.y - 1.5f, iconMinimap.transform.position.z);
         SpriteRenderer icon = iconMinimap.AddComponent<SpriteRenderer>();
         icon.sprite = _minimapSprite;
-        icon.color = new Color(_minimapColors[colorIdx].r, _minimapColors[colorIdx].g, _minimapColors[colorIdx].b);
+        icon.color = new Color(_minimapColors[colorIdx].r, _minimapColors[colorIdx].g, _minimapColors[colorIdx].b, 0.75f);
     }
 
     private void SetTerrain(GameObject cellObject)
@@ -149,5 +152,10 @@ public class GridManager : MonoBehaviour
         terrain.transform.localPosition = new Vector3(0f, -0.38f, 0f);
         int rot = Random.Range(0, 4);
         terrain.transform.Rotate(0f, 90f * rot, 0f, Space.World);
+    }
+
+    public Vector3 GetPositionOf(int index)
+    {
+        return _gridMap[index].gameObject.transform.position;
     }
 }
