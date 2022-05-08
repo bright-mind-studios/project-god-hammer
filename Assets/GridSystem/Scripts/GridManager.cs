@@ -144,6 +144,7 @@ public class GridManager : MonoBehaviour
         GameObject terrain = Instantiate(_defaultTerrainPrefab, cellObject.transform);
         terrain.name = "Terreno base";
         terrain.layer = LayerMask.NameToLayer("Minimap");
+        terrain.tag = "DefaultTerrain";
         terrain.transform.localScale = new Vector3(0.5f, 0.2f, 0.5f);
         terrain.transform.localPosition = new Vector3(0f, -0.38f, 0f);
         int rot = Random.Range(0, 4);

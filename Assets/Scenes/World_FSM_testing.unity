@@ -540,6 +540,9 @@ MonoBehaviour:
   _environmentEntities:
   - {fileID: 11400000, guid: 31648708b0e76554d9804fda8b3d8776, type: 2}
   - {fileID: 11400000, guid: 1ec9357eaa1885748ad5cc77370aa586, type: 2}
+  - {fileID: 11400000, guid: 6d0ab5ed1032c974bb3179fe71ac76b0, type: 2}
+  - {fileID: 11400000, guid: 10586afc28839934d88b0a9aaeb87c43, type: 2}
+  - {fileID: 11400000, guid: 3a067c3c02236aa4dad583b0ad548cef, type: 2}
   _defaultTerrainPrefab: {fileID: 138836365270009319, guid: 7baba197ce36c92439b423eabaad3737, type: 3}
   _terrainMaterials:
   - {fileID: 2100000, guid: 4d7d4a00a93111049be88785b2872e68, type: 2}

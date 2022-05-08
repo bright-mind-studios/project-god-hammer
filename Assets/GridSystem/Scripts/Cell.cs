@@ -46,7 +46,21 @@ public class Cell : MonoBehaviour
         _environmentEntity.transform.localPosition = entity.localPosition;
         int rot = Random.Range(0, 4);
         entityHolder.transform.Rotate(0f, 90f * rot, 0f, Space.World);
-        SetEntityIcon(entityHolder, entity.mapSprite, new Color(entity.placeholderColor.r, entity.placeholderColor.g, entity.placeholderColor.b));
+
+        if (entity.terrainModifier)
+        {
+            foreach (Transform child in transform)
+            {
+                if (child.CompareTag("DefaultTerrain"))
+                {
+                    Destroy(child.gameObject);
+                    break;
+                }
+            }
+        }
+
+        if (entity.resourceProvider) SetEntityIcon(entityHolder, entity.mapSprite, new Color(entity.placeholderColor.r, entity.placeholderColor.g, entity.placeholderColor.b));
+
         return _environmentEntity;
     }
 

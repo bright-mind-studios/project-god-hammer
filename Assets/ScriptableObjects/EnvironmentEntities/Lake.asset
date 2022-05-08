@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5c439a17d05394469e11a63f7df2baf, type: 3}
-  m_Name: Tree
+  m_Name: Lake
   m_EditorClassIdentifier: 
-  name: Tree
-  resourceProvider: 1
-  terrainModifier: 0
-  spawnChance: 0.136
+  name: Lake
+  resourceProvider: 0
+  terrainModifier: 1
+  spawnChance: 0.075
   localScale: {x: 0.5, y: 0.2, z: 0.5}
-  localPosition: {x: 0, y: 0, z: 0}
-  prefab: {fileID: 9073540666229958091, guid: f3fc2cb863d85864a95a2c8b64fa48ad, type: 3}
-  mapSprite: {fileID: 21300000, guid: 4cbdd7fb3a50c7e49aa31561d236f4d3, type: 3}
-  placeholderColor: {r: 0, g: 1, b: 0.93622017, a: 0}
+  localPosition: {x: 0.49, y: -0.21, z: 0.19}
+  prefab: {fileID: 268118961561806861, guid: 66072c42e7f38924f90a2ea3e36cc606, type: 3}
+  mapSprite: {fileID: 0}
+  placeholderColor: {r: 0, g: 0, b: 0, a: 0}

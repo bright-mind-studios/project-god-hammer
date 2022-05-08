@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4565673654650633490}
   - component: {fileID: 1781297581018548696}
   - component: {fileID: 268118961561806860}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: PP_Lake_Ground_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,6 +57,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -81,6 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &268118961561806860
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -107,7 +109,7 @@ GameObject:
   - component: {fileID: 2996966420596058790}
   - component: {fileID: 2278274022941764938}
   - component: {fileID: 5319147200080114588}
-  m_Layer: 0
+  m_Layer: 20
   m_Name: PP_Lake_Ground_Water_04
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -151,6 +153,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -175,6 +178,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!64 &5319147200080114588
 MeshCollider:
   m_ObjectHideFlags: 0

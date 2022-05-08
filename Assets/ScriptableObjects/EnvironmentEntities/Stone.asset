@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Stone
   resourceProvider: 1
-  spawnChance: 0.173
+  terrainModifier: 0
+  spawnChance: 0.125
   localScale: {x: 0.5, y: 0.2, z: 0.5}
   localPosition: {x: 1.84, y: 0, z: 3.11}
   prefab: {fileID: 830885419833549530, guid: e8e7d2604cda6f847a08e92a0246e7bb, type: 3}
