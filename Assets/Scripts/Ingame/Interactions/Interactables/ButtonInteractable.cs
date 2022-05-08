@@ -20,7 +20,7 @@ public class ButtonInteractable : TouchInteractable
 
     public override void OnHoverEnter(HoverEnterEventArgs args){
         target.position = starPos + Vector3.down * offset;
-        OnPressButton.Invoke();
+        OnPressButton?.Invoke();
     }
 
     public override void OnHoverExit(HoverExitEventArgs args){
