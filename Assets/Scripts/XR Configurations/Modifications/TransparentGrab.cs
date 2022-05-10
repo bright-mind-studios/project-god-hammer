@@ -6,6 +6,7 @@ public class TransparentGrab : OffsetGrab
     private Material interactorMaterial;
     private SkinnedMeshRenderer interactorRenderer;
 
+    [System.Obsolete]
     protected override void OnSelectEntered(XRBaseInteractor interactor)
     {
         base.OnSelectEntered(interactor);
@@ -18,11 +19,12 @@ public class TransparentGrab : OffsetGrab
     private void EnableMapGrid()
     {
         GameObject.FindGameObjectWithTag("MinimapCamera").GetComponent<Camera>().cullingMask |= (1 << 21);
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().cullingMask |= (1 << 22);
     }
 
     private void SetObjectTransparency()
     {
-        MeshRenderer renderer = gameObject.GetComponent<MeshRenderer>();
+        MeshRenderer renderer = gameObject.GetComponentInChildren<MeshRenderer>();
         renderer.material.color = new Color(renderer.materials[0].color.r, renderer.materials[0].color.g, renderer.materials[0].color.b, 0.75f);
     }
 
@@ -45,26 +47,27 @@ public class TransparentGrab : OffsetGrab
 
     private void SetInteractorTransparency()
     {
-        interactorRenderer.material = gameObject.GetComponent<MeshRenderer>().material;
+        interactorRenderer.material = gameObject.GetComponentInChildren<MeshRenderer>().material;
     }
 
+    [System.Obsolete]
     protected override void OnSelectExited(XRBaseInteractor interactor)
     {
         base.OnSelectExited(interactor);
         DisableMapGrid();
         ResetObjectTransparency();
         ResetInteractorMaterial();
-        Move();
     }
 
     private void DisableMapGrid()
     {
         GameObject.FindGameObjectWithTag("MinimapCamera").GetComponent<Camera>().cullingMask &= ~(1 << 21);
+        GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>().cullingMask &= ~(1 << 22);
     }
 
     private void ResetObjectTransparency()
     {
-        MeshRenderer renderer = gameObject.GetComponent<MeshRenderer>();
+        MeshRenderer renderer = gameObject.GetComponentInChildren<MeshRenderer>();
         renderer.material.color = new Color(renderer.materials[0].color.r, renderer.materials[0].color.g, renderer.materials[0].color.b, 1f);
     }
 
@@ -72,14 +75,5 @@ public class TransparentGrab : OffsetGrab
     {
         interactorRenderer.material = interactorMaterial;
         interactorMaterial = null;
-    }
-
-    private void Move()
-    {
-        GridMovement gridMovement = GameObject.FindObjectOfType<GridMovement>();
-
-        if (gridMovement == null) return;
-
-        gridMovement.Move();
     }
 }

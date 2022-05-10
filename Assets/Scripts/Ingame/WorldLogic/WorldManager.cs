@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class WorldManager : MonoBehaviour
@@ -27,6 +25,6 @@ public class WorldManager : MonoBehaviour
         Mesh mapMesh = _map.GetComponent<MeshFilter>().mesh;
         Vector3 mapDimensions = mapMesh.bounds.size;
         int worldSize = _gridManager.WorldRadius * 2 + 1;
-        return mapDimensions.x * cellSize * _map.transform.localScale.x / worldSize;
+        return mapDimensions.x * cellSize * 0.2f / worldSize;
     }
 }

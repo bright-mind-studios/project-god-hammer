@@ -154,6 +154,11 @@ public class GridManager : MonoBehaviour
         terrain.transform.Rotate(0f, 90f * rot, 0f, Space.World);
     }
 
+    public bool CheckIndexOf(int index)
+    {
+        return 0 <= index && index < _gridSize * _gridSize;
+    }
+
     public Vector3 GetPositionOf(int index)
     {
         return _gridMap[index].gameObject.transform.position;
