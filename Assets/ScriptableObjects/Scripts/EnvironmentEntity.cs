@@ -13,6 +13,7 @@ public class EnvironmentEntity : ScriptableObject
     public Vector3 localScale = Vector3.one;
     public Vector3 localPosition = Vector3.zero;
     public GameObject prefab;
+    public GameObject minigame;
     public Sprite mapSprite;
     public Color placeholderColor;
 }

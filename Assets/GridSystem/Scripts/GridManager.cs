@@ -163,4 +163,9 @@ public class GridManager : MonoBehaviour
     {
         return _gridMap[index].gameObject.transform.position;
     }
+
+    public GameObject GetMinigame(int index)
+    {
+        return _gridMap[index].GetMinigame();
+    }
 }

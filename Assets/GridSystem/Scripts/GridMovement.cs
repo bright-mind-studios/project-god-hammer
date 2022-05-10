@@ -5,10 +5,14 @@ using UnityEngine;
 public class GridMovement : MonoBehaviour
 {
     [SerializeField] private GameObject cloudManager;
+    [SerializeField] private GameObject _spawnPlace;
+    private GameObject _minigame;
 
     private GridManager _gridManager;
     private MapSnapping _mapSnapping;
     private Coroutine _currentMove;
+
+    private int _index;
 
     public void Initialize(GridManager gridManager, MapSnapping mapSnapping)
     {
@@ -16,23 +20,13 @@ public class GridMovement : MonoBehaviour
         _mapSnapping = mapSnapping; 
     }
 
-    public void Update()
-    {
-        //if (_speed == 0) return;
-
-        //transform.position = Vector3.Lerp(_startPosition, _endPosition, _speed * Time.deltaTime);
-
-        //if (transform.position.Equals(_endPosition)) _speed = 0f;
-
-    }
-
     public void Move()
     {
-        int index = _mapSnapping.GetDeployedCellIndex();
+        _index = _mapSnapping.GetDeployedCellIndex();
 
-        if (!_gridManager.CheckIndexOf(index)) return;
+        if (!_gridManager.CheckIndexOf(_index)) return;
 
-        Vector3 newPosition = _gridManager.GetPositionOf(index);
+        Vector3 newPosition = _gridManager.GetPositionOf(_index);
         Vector3 startPosition;
         Vector3 endPosition;
         //transform.position = new Vector3(newPosition.x, transform.position.y, newPosition.z);
@@ -44,6 +38,8 @@ public class GridMovement : MonoBehaviour
 
     IEnumerator MoveFromTo(Vector3 currentPosition, Vector3 newPosition)
     {
+        DestroyMinigame();
+
         float elapsedTime = 0;
         float travelTime = 3f;
 
@@ -57,9 +53,23 @@ public class GridMovement : MonoBehaviour
         }
 
         transform.position = newPosition;
-
+        SpawnItem();
         
         _mapSnapping.EnableKinetic(false);
         yield return null;
+    }
+
+    private void DestroyMinigame()
+    {
+        if (_minigame != null) Destroy(_minigame);
+    }
+
+    private void SpawnItem()
+    {
+        GameObject minigame = _gridManager.GetMinigame(_index);
+
+        if (minigame == null) return;
+
+        _minigame = Instantiate(minigame,_spawnPlace.transform, false);
     }
 }

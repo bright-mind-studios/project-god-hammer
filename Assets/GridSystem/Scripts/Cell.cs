@@ -6,6 +6,7 @@ public class Cell : MonoBehaviour
     private float _cellSize;
     private Vector3 _worldPosition;
     private GameObject _environmentEntity;
+    private GameObject _minigame;
 
     public int X { get { return _x; } private set { } }
     public int Z { get { return _z; } private set { } }
@@ -61,6 +62,8 @@ public class Cell : MonoBehaviour
 
         if (entity.resourceProvider) SetEntityIcon(entityHolder, entity.mapSprite, new Color(entity.placeholderColor.r, entity.placeholderColor.g, entity.placeholderColor.b));
 
+        _minigame = entity.minigame;
+
         return _environmentEntity;
     }
 
@@ -75,5 +78,10 @@ public class Cell : MonoBehaviour
 
         Destroy(_environmentEntity);
         _environmentEntity = null;
+    }
+
+    public GameObject GetMinigame()
+    {
+        return _minigame;
     }
 }
