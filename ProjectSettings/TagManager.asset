@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MinimapCamera
+  - DefaultTerrain
   layers:
   - Default
   - TransparentFX
@@ -25,9 +27,9 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
+  - Minimap
+  - MinimapGrid
+  - MinimapGridIndicator
   - 
   - 
   - 
