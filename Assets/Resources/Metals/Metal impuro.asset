@@ -16,4 +16,4 @@ MonoBehaviour:
   prefab: {fileID: 0}
   sprite: {fileID: 0}
   tier: 3
-  state: 0
+  color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}

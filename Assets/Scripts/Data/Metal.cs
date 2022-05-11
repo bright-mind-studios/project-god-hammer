@@ -13,4 +13,6 @@ public class Metal : Element
     }
 
     public Tier tier;
+
+    public Color color;
 }
