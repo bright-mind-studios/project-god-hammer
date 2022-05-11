@@ -62,7 +62,6 @@ public class MetalRock : MonoBehaviour
         var d = Random.insideUnitCircle;
         var direction = new Vector3(d.x, 0, d.y);
         var origin = Vector3.Lerp(limit_down.position, limit_up.position, delta) - direction * offset;
-        Debug.Log(origin);
         GameObject m;
         if(Physics.Raycast(origin, direction, out RaycastHit hit, offset, mask))
         {
