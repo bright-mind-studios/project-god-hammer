@@ -20,5 +20,4 @@ MonoBehaviour:
   localPosition: {x: 0.55, y: 0, z: -1.84}
   prefab: {fileID: 5353600119847181726, guid: 476abfdce21789d448306ee546497b43, type: 3}
   minigame: {fileID: 7655564899459497897, guid: 691991941dc754347b21acbd0859411c, type: 3}
-  mapSprite: {fileID: 21300000, guid: 4cbdd7fb3a50c7e49aa31561d236f4d3, type: 3}
-  placeholderColor: {r: 0.486979, g: 0, b: 1, a: 0}
+  mapSprite: {fileID: 3947061164568741086, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
