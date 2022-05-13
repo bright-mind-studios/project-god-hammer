@@ -18,6 +18,7 @@ public class WorldManager : MonoBehaviour
         float mapCellSize = ComputeMapCellSize(_gridManager.CellSize);
         _mapSnapping.Initialize(mapCellSize, _gridManager.WorldRadius, _map.transform);
         _gridMovement.Initialize(_gridManager, _mapSnapping);
+        _gridManager.LoadEntitiesIcons(_mapSnapping);
     }
 
     private float ComputeMapCellSize(int cellSize)

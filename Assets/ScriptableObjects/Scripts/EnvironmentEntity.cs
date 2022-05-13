@@ -15,5 +15,4 @@ public class EnvironmentEntity : ScriptableObject
     public GameObject prefab;
     public GameObject minigame;
     public Sprite mapSprite;
-    public Color placeholderColor;
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MapSnapping : MonoBehaviour
@@ -12,9 +13,17 @@ public class MapSnapping : MonoBehaviour
     private float _reciprocal;
     private Vector2 _basePosition;
     private Transform _map;
-    private GameObject _mapIndicator;
+    private GameObject _mapIndicator, _icons;
+    private Dictionary<int, GameObject> _entityIcons;
 
     private bool kineticEnabled = false;
+
+    private void Awake()
+    {
+
+        _entityIcons = new Dictionary<int, GameObject>();
+        _icons = new GameObject("entityIcons");
+    }
 
     public void Initialize(float cellSize, int worldRadius, Transform map)
     {
@@ -22,6 +31,7 @@ public class MapSnapping : MonoBehaviour
         _reciprocal = 1f / _cellSize;
         _worldRadius = worldRadius;
         _map = map;
+        _icons.transform.SetParent(_map);
         transform.position = GetSnappedPosition();
         _basePosition = new Vector2(_map.transform.position.x, _map.transform.position.z);
         SetMinimapIndicator(_map.gameObject);
@@ -80,5 +90,36 @@ public class MapSnapping : MonoBehaviour
     public void EnableKinetic(bool enabled)
     {
         kineticEnabled = enabled;
+    }
+
+    public void SetIcon(int x, int y, Sprite sprite)
+    {
+        int index = GetIndex(x, y);
+        // Minimap Icon
+        GameObject iconMinimap = new GameObject(sprite.name+"_"+index);
+        iconMinimap.transform.SetParent(_icons.transform, false);
+        iconMinimap.layer = LayerMask.NameToLayer("Minimap");
+        iconMinimap.transform.localScale = new Vector3(1f * _cellSize / 4, 1f * _cellSize / 4, 1f);
+        iconMinimap.transform.Rotate(-90f, 0f, 90f, Space.World);
+        iconMinimap.transform.position = new Vector3((_basePosition.x - _worldRadius * _cellSize) + x * _cellSize, 
+            _map.transform.position.y+0.001f,
+            (_basePosition.y - _worldRadius * _cellSize) + y * _cellSize);
+        SpriteRenderer icon = iconMinimap.AddComponent<SpriteRenderer>();
+        icon.sprite = sprite;
+        _entityIcons.Add(index, iconMinimap);
+    }
+
+    private int GetIndex(int x, int y)
+    {
+        return x * (_worldRadius * 2 + 1) + y;
+    }
+
+    public void DeleteIcon(int index)
+    {
+        if (_entityIcons.ContainsKey(index))
+        {
+            Destroy(_entityIcons[index]);
+            _entityIcons.Remove(index);
+        }
     }
 }
