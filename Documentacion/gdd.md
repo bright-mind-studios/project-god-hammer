@@ -9,31 +9,94 @@ Los tipos de puntos de recurso son bosques y minas.
 
 ![mapa](images/mapa.png "Mapa") 
 
----
+### Cosas generales de VR:
+
+- InteractionLayers: Cada *Interactor* o *Interactable* puede tener una o varias capas de interacción, para determinar como interactuan entre sí. Si un *Interactor* solo tiene la capa x, solo podrá interactuar con *Interactables* con la capa X. Se usa para distinguir la interacción a distancia (*RayInteractors*) y directa, y para las *SnapZones*.
+
+- SnapZone: Objeto de la escena que sirve para dejar *GrabInteractors* anclados a ellos. Funcionan con la clase *XRSocketInteractor*. Puedes definir que tipo de objetos se pueden guardar usando *InteractionLayers*. En el juego se definen 4: ore (minerales y madera), ingot (lingotes), tools (herramientas como el pico, el hacha o el martillo) y weapons (armas). También incluyen eventos para cuando un *GrabInteractable* entra o sale de su collider o cuando se quita o pone un *GrabInteractable* dentro. En concreto se han usado estos dos últimos para guardar información sobre los objetos guardados, ya que los eventos incluyen parámetros con esta información. 
+
+- Botones: Son *Interactables* simples que invocan un evento cuando un *DirectInteractor* entra dentro de su collider. Se puede hacer que se ejecute cualquier función (sin parámetros) cuando se llama a estos eventos usando el editor.
+
+- Palancas: Son *GrabInteractables* que incluyen un componente de tipo *Joint*. Los componentes de tipo *Joint* permiten limitar el movimiento de los objetos de ciertas formas (rotación, translación, etc.).
+
+
+
+> ------------------------------------- [NUEVO] ---------------------------------
+### Nube
+
+### Manual (No implementada) 
+
+Contiene toda la información necesaria para forjar armas (como obtener recursos, tabla de aleaciones, como usar las estaciones, etc.).
+
+### Recursos: Permite usar un punto de recurso seleccionado en el mapa.
+
+ - Si se selecciona un bosque, aparecera un arbol en la estación y el jugador tendrá que golpear el tronco del árbol varias veces a distintas alturas. cada golpe generará 1 de madera.
+ - Si se selecciona una mina, aparecerá una piedra con distintos metales incrustados, identificados por un color concreto. La piedra girará sobre sí misma y el jugador podrá usar el pico para golpear la piedra. Si golpea con suficiente fuerza generará minerales. Golpear los minerales incrustados generará el metal correspondiente (destruyendo el mineral) y golpear la piedra generará metal impuro (con un cooldown).
+
+![recursos](images/recursos.png "recursos") 
+
+### Cofre
+
+Lugar donde se guardan todos los recursos del jugador.
+Permite guardar recursos usando SnapZones. Se divide en 4 secciones que se pueden girar usando las *Palancas* de los laterales.
+Cada sección tiene 2 partes, en una se pueden guardar metales y en otra armas.
 
 ### Estaciones
 
-- **Manual**: Contiene toda la información necesaria para forjar armas (como obtener recursos, tabla de aleaciones, como usar las estaciones, etc.).
-- **Cofre**: Lugar donde se guardan todos los recursos del jugador.
-- **Recurso**: Permite usar un punto de recurso seleccionado en el mapa.
-    - Si se selecciona un bosque, aparecera un arbol en la estación y el jugador tendrá que golpear el tronco del árbol varias veces hasta romperlo. Cuando complete el minijuego recibirá cierta cantidad de leña.
-    - Si se selecciona una mina, aparecerá una cilindro de piedra con distintos metales incrustados, identificados por un color concreto. El cilindro girará sobre sí mismo y el jugador podrá picar el metal un número limitado de veces hasta que se rompa. Si golpea alguno de los metales incrustados recibirá ese metal, y si falla recibirá metales impuros.
+Una sección de la nube es el sistema de estaciones. Cuenta con 4 estaciones que se pueden activar y desactivar usando los 4 **botones**.
 
-- **Forja**: Sirve para fundir un metal. El jugador obtiene el mismo metal que funda pero en estado líquido.
-- **Caldero**: Sirve para combinar varios metales y crear una aleación. Para usarla se eligen 2 o 3 metales fundidos. El jugador deberá remover la mezcla a una velocidad fija durante un tiempo determinado para obtener la aleación. Al terminar el jugador obtendra la aleación determinada. Si ha mezclado varios metales que no pueden formar una aleación obtendrá el objeto "aleación desconocida".
-- **Molde**: Sirve para dar forma a un metal fundido o aleación, a partir de un molde construido con un bloque de piedra. El jugador debe escoger una de las plantillas disponibles y aparecerá una guía marcada encima del bloque de piedra. Después se debe recortar el bloque siguiendo la guía. Si lo consigue podra echar el metal en el molde, y si no tendrá que repetir el proceso.
-- **Yunque**: Sirve para terminar las armas forjadas. El jugador deberá golpear con un martillo distintos puntos del arma con una fuerza y ángulo determinado. La precisión determinará la calidad del arma final (de 1 a 5 estrellas). Si no se consigue la calidad necesaria se podrá deshacer el proceso usando un martillo especial.
-![recursos](images/recursos.png "recursos") 
+---
+
+#### FORJA
+
+Sirve para conseguir lingotes de metal a partir de minerales.
+
+En la parte superior hay 3 **SnapZones** en las que se colocan minerales de metal. En la parte inferior hay una **SnapZone** en la que si se coloca madera aumenta el combustible de la forja en 1, hasta un máximo de 10.
+Al pulsar el **botón**, si hay al menos 1 de combustible, se iniciará una animación y al acabar los metales introducidos se destruirán, sustituyendose por su equivalente en lingote. 
+
+---
+
+#### CALDERO
+
+Sirve para conseguir aleaciones.
+
+Tiene 2 **SnapZones** en las que se pueden introducir lingotes. Al pulsar el **botón**, se comprobará si existe una aleación de esos dos metales, y si existe se destruirán y se generará un lingote de la aleación correspondiente.
+
+*(Falta jugabilidad de remover el caldero)*
+
+---
+
+#### MOLDE
+
+Sirve para conseguir armas de nivel 0 (no sirven para las peticiones).
+
+Tiene 2 **botones**. El primero sirve para cambiar la plantilla del molde (hay 5 plantillas una por cada arma). La segunda sirve para generar el arma o resetear el molde si la estación no tiene ningun elemento.
+
+Tiene 1 **snapZone** en la que se puede introducir un lingote. Al introducirlo la estación guarda el elemento de ese lingote (metal o aleación).
+
+Para poder generar el arma antes se tiene que haber creado el molde. Para crearlo hay un cortador en la esquina que se puede agarrar. El cortador activa un laser con el trigger del mando que siempre apunta hacia abajo. El objetivo es recorrer la linea marcada en rojo en la piedra siguiendo los puntos sin salirse de la linea. Si se completa la linea desaparecerá y aparecerá el molde correspondiente.
+
+---
+
+#### YUNQUE
+
+Sirve para conseguir armas de nivel 1 o superior.
+
+Tiene 1 **SnapZone** que solo admite armas (de cualquier nivel).
+
+Al pulsar el **botón**, se activa el minijuego. Encima del yunque aparecerán marcas de distintos colores que determinan la fuerza con la que se tiene que golpear. El jugador debe usar el martillo de la esquina para golpear los puntos. Cuanto mas cercana sea la fuerza con la que golpea a la necesaria máa puntos ganará. Cuando haya pasado el tiempo el arma obtendrá un nivel proporcional a la puntuación.
+
 ![estaciones](images/estaciones.png "Estaciones") 
 ---
 
 ### Recursos
 
-- **Leña**: Se obtiene de los bosques y sirve para encender la forja y poder fundir metales y crear aleaciones.
-- **Metales**: Se obtienen de las minas y sirven para crear aleaciones y armas. 
-- **Aleaciones**: Se obtienen de combinar dos o tres metales y sirven para crear armas.
-- **Armas (sin acabar)**: Se obtiene de enfriar un metal en un molde.
-- **Armas**: Sirven para completar peticiones de aldeas.
+- **Leña**: Se obtiene de los bosques y sirve para encender la forja y poder fundir minerales.
+- **Minerales**: Se obtienen de las minas y sirven para fundirse y crear metales. 
+- **Metales**: Se obtienen de fundir minerales y sirven para crear armas y aleaciones.
+- **Aleaciones**: Se obtienen de combinar dos metales y sirven para crear armas.
+- **Armas (nivel 0)**: Se obtiene de enfriar un metal en un molde.
+- **Armas (nivel 1+)**: Sirven para completar peticiones de aldeas.
 
 #### Metales
 
@@ -47,25 +110,22 @@ En el juego existen 6 metales base (divididos en 3 tiers),  2 elementos especial
 
 #### Aleaciones
 
- ##### Aleaciones binarias
-
 |         | Cobre     |Estaño        |Hierro  |Aluminio   |Plata       |Oro       |Plomo        |Carbón     |M. impuros    |
 |----------|:------------:|:--------------:|:--------:|:-----------:|:------------:|:----------:|:-------------:|:-----------:|:--------------:|
 |**Cobre**     |            |Bronce        |        |Duraluminio|Plata de ley|Oro rojo  |Peltre       |           |latón         |
-|**Estaño**   |Bronce      |              |?     |?        |?         |          |Metal de rose|           |Metal de field|
-|**Hierro**    |            |?           |        |           |            |Oro azul  |?          |Acero      |Vitalio       |
-|**Aluminio**  |Duraluminio |?           |        |           |            |Oro verde |             |?        |Alnico        | 
-|**Plata**     |Plata de ley|?           |        |           |            |          |             |Plata negra|?           |
+|**Estaño**   |Bronce      |              |Platea |Palanadio   |Plata fina  |          |Metal de rose|           |Metal de field|
+|**Hierro**    |            |Platea       |        |           |            |Oro azul  |Concretum         |Acero      |Vitalio       |
+|**Aluminio**  |Duraluminio |Palanadio  |        |           |            |Oro verde |             |valicio    |Alnico        | 
+|**Plata**     |Plata de ley|Plata fina  |        |           |            |          |             |Plata negra|Osmo      |
 |**Oro**      |Oro rojo    |              |Oro azul|Oro verde  |            |          |             |           |Oro blanco    |
-|**Plomo**    |Peltre      |Metal de rose |?     |           |            |          |             |           |              | 
-|**Carbón**    |            |              |Acero   |?        |Plata negra |          |             |           |              | 
-|**M. impuros**|Latón       |Metal de field|Vitalio |Alnico     |?         |Oro blanco|             |           |              | 
+|**Plomo**    |Peltre      |Metal de rose |Concretum  |           |            |          |             |           |              | 
+|**Carbón**    |            |              |Acero   |Valicio    |Plata negra |          |             |           |              | 
+|**M. impuros**|Latón       |Metal de field|Vitalio |Alnico     |Osmo    |Oro blanco|             |           |              | 
 
-> ?: Falta ponerles nombre
 
 #### Armas
 
-Existen distintos tipos de armas que las aldeas pueden pedir. El tipo de arma únicamente define la forma que se le debe dar a la pieza de metal que se use para forjarla (espadas, hachas, escudos, lanzas, etc.). 
-Cada arma se identifica por un tipo o forma, un metal o aleación con el que se construye y una calidad mínima.
+Existen distintos tipos de armas que las aldeas pueden pedir. El tipo de arma únicamente define la forma que se le debe dar a la pieza de metal que se use para forjarla (espadas, hachas, escudos, lanzas y martillos). 
+Cada petición se identifica por un tipo o forma de arma, un metal o aleación con el que se construye y una calidad mínima.
 
 
