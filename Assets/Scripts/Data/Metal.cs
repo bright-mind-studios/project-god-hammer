@@ -12,7 +12,10 @@ public class Metal : Element
         special
     }
 
-    public Tier tier;
-
     public Color color;
+
+    public override Color GetPrimaryColor() => color;
+
+    public override Color GetSecondaryColor() => color;
+    public Tier tier;
 }

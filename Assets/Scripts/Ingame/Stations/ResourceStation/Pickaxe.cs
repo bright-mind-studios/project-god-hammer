@@ -17,21 +17,20 @@ public class Pickaxe : MonoBehaviour
 
     public float cooldownrock = 5f;
 
-    private bool rock_enabled;
+    public bool rock_enabled;
     private void Start() {
         rb = GetComponent<Rigidbody>();
     }
 
     public IEnumerator cooldownRoutine(){
+        rock_enabled = false;
         yield return new WaitForSeconds(5f);
         rock_enabled = true;
 
     }
-    // Start is called before the first frame update
+
     private void OnCollisionEnter(Collision other)
     {
-        
-        //Debug.Log(Vector3.Magnitude(rb.velocity));
         MetalRock rock = other.gameObject.GetComponent<MetalRock>();        
 
         if (Vector3.Magnitude(rb.velocity) < neededSpeed)
@@ -39,7 +38,7 @@ public class Pickaxe : MonoBehaviour
         
         if(rock != null && rock_enabled)
         {
-            rock_enabled = false;
+            StartCoroutine(cooldownRoutine());
             var metalspawned = Instantiate(metalOrePrefab, spawnPoint.position + Random.insideUnitSphere * .1f, spawnPoint.rotation);
             metalspawned.GetComponent<MetalItem>().SetMetal(defaultMetal);
         }

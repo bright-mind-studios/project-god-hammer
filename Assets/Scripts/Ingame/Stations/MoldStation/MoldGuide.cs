@@ -30,7 +30,6 @@ public class MoldGuide : MonoBehaviour
     }
 
     public void Trigger(bool active){
-        Debug.Log("Trigger --> " + active);
         guideLineRenderer.gameObject.SetActive(active);
         cutLineRenderer.gameObject.SetActive(active);
         target.gameObject.SetActive(active);

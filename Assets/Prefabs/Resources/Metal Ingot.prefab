@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 8387612514793452275}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.281, z: 0.067}
-  m_LocalScale: {x: 0.25, y: 0.075, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.05, z: 0.06}
   m_Children:
   - {fileID: 3211009953743519840}
   m_Father: {fileID: 0}
@@ -81,7 +81,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 16
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -192,15 +192,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eaf6a6b87c5914748bfd34fe14a6573a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 178.4
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eaf6a6b87c5914748bfd34fe14a6573a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 150
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eaf6a6b87c5914748bfd34fe14a6573a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 212.2
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: eaf6a6b87c5914748bfd34fe14a6573a, type: 3}
       propertyPath: m_LocalPosition.x

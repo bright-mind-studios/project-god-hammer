@@ -22,7 +22,6 @@ public class SnapInteractor : XRSocketInteractor
 
     public void GenerateMetalIngot(Metal metal)
     {
-        Debug.Log("AAAAA");
         var ingotItem = Instantiate(ingotPrefab, spawnPoint.position, spawnPoint.rotation);
         ingotItem.GetComponent<IngotItem>().SetMetal(metal);
     }
