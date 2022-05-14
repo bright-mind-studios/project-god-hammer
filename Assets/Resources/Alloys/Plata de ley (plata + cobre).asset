@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f31552598a39a62468bd757b86355f92, type: 3}
+  m_Name: Plata de ley (plata + cobre)
+  m_EditorClassIdentifier: 
+  itemname: Peltre
+  prefab: {fileID: 8387612514793452275, guid: 1c574804f7300cd4486548724bf77c91, type: 3}
+  sprite: {fileID: 6420001348716804140, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+  primaryMetal: {fileID: 11400000, guid: 389de5b4b5308124b94424ca4d483aeb, type: 2}
+  secondaryMetal: {fileID: 11400000, guid: ecdabd2bae739434d8bc7c56c68b3589, type: 2}
+  primaryColor: {r: 0.77254903, g: 0.77254903, b: 0.77254903, a: 1}
+  secondaryColor: {r: 0.69803923, g: 0.3882353, b: 0.23921569, a: 1}
