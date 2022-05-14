@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0edc9ccd6a75d174b94eeaec2391acdb, type: 3}
+  m_Name: Spear
+  m_EditorClassIdentifier: 
+  points:
+  - {x: -0.85, y: -0.85, z: 0}
+  - {x: 0.85, y: -0.85, z: 0}
+  - {x: 0.85, y: 0.85, z: 0}
+  - {x: -0.85, y: 0.85, z: 0}
+  moldPrefab: {fileID: 7686040138262868653, guid: 5ca3054b8355bc1459780d596cd6e8b5, type: 3}
+  weaponPrefab: {fileID: 8559120721087213780, guid: bd09257288a6a074895f437765b01f2d, type: 3}

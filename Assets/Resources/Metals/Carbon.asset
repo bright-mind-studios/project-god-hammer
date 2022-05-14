@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: "Carb\xF3n"
   prefab: {fileID: 0}
-  sprite: {fileID: 0}
+  sprite: {fileID: -8744259897943939281, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+  color: {r: 0, g: 0, b: 0, a: 1}
   tier: 3
-  state: 0

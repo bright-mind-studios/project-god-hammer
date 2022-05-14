@@ -5,78 +5,79 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class Mold : MonoBehaviour
-{
-    [SerializeField] private float threshold = 0.2f;
-    [SerializeField] private MoldGuide guide;
+{    
+    // 
+    [SerializeField] float LINE_THRESHOLD = 0.1f;
+    [SerializeField] float POINT_THRESHOLD = 0.05f;
+    //
+    [SerializeField] MoldStation station;
+    [SerializeField] Transform marker;
+    [SerializeField] public LineRenderer lineRenderer;
+    [SerializeField] List<WeaponShape> shapes;
+    public int currentShapeIdx = 0;
+    private int currentPointIdx;
 
-    private WeaponShape currentShape;
-    public bool completed;
+    // Properties
 
-    public event Action<bool> OnChangeState; 
-
-    public int lastPointIdx, currentPointIdx;
-
-    private void Start() 
+    private Vector3[] CurrentShape => shapes[currentShapeIdx].points;
+    private Vector3 CurrentPoint => CurrentShape[currentPointIdx];
+    private Vector3 LastPoint => CurrentShape[Mathf.Max(currentPointIdx - 1, 0)];
+    
+    private void OnEnable() 
     {
-        completed = false;
-        OnChangeState?.Invoke(completed);
+        lineRenderer.SetPositions(CurrentShape);
+        ResetShape();
     }
 
-    private void ResetMold()
+    public void SwapShape()
     {
-        completed = false;
-        OnChangeState?.Invoke(completed);
-        lastPointIdx = currentPointIdx = 0;
-        guide.MoveTarget(currentShape.points[currentPointIdx]);
+        currentShapeIdx = (currentShapeIdx + 1) % shapes.Count;
+        lineRenderer.SetPositions(CurrentShape);
+        UpdateMarkerPosition();
     }
 
-    public void setWeaponShape(WeaponShape shape){
-        currentShape = shape;
-        guide.Trigger(true);
-        ResetMold();
-        guide.RenderGuideLine(currentShape.points.ToArray());
+    private void ResetShape()
+    {
+        currentPointIdx = 0;
+        UpdateMarkerPosition();
     }
-
+    // Evento de colision
     public void OnCutterHit(Vector3 collisionPoint)
     {
-        if(completed || currentShape == null) return;
-
-        collisionPoint = transform.InverseTransformPoint(collisionPoint);
-        if (Vector2.Distance(collisionPoint, currentShape.points[currentPointIdx]) < threshold)
+        Vector2 localCollisionPoint = transform.InverseTransformPoint(collisionPoint);
+        if (Vector2.Distance(localCollisionPoint, CurrentPoint) < POINT_THRESHOLD)
         {
-            UpdatePoint();
+            CompletePoint();         
         }
         else 
         {
-            Vector3 closestPointOnLine = GetClosestPointOnFiniteLine(collisionPoint, currentShape.points[lastPointIdx], currentShape.points[currentPointIdx]);
-            if(Vector2.Distance(collisionPoint, closestPointOnLine) > threshold)
-            {
-                Debug.Log(collisionPoint + " / " + currentShape.points[lastPointIdx] +" / " + currentShape.points[currentPointIdx]);
-                ResetMold();
+            Vector3 closestPointOnLine = GetClosestPointOnFiniteLine(localCollisionPoint, LastPoint, CurrentPoint);
+            if(Vector2.Distance(localCollisionPoint, closestPointOnLine) > LINE_THRESHOLD)
+            {               
+                ResetShape();
             }
         }
     }
 
-    public void OnCutterStop()
+    private void CompletePoint()
     {
-        if(!completed) ResetMold();
-    }
-
-    private void UpdatePoint()
-    {
-        lastPointIdx = currentPointIdx;
-        currentPointIdx += 1;
-        if(currentPointIdx >= currentShape.points.Count)
+        if (currentPointIdx == CurrentShape.Length - 1)
         {
-            completed = true;
-            OnChangeState?.Invoke(completed);
-            guide.Trigger(false);
+            // Minijuego completado
+            station.CompleteShape(shapes[currentShapeIdx]);
         }
-        else{
-            guide.MoveTarget(currentShape.points[currentPointIdx]);
-        }
-
+        else
+        {
+            currentPointIdx += 1;
+            UpdateMarkerPosition();
+        }            
     }
+
+    private void UpdateMarkerPosition()
+    {
+        marker.localPosition = CurrentPoint;
+    }
+
 
     private static Vector3 GetClosestPointOnFiniteLine(Vector3 point, Vector3 line_start, Vector3 line_end)
     {

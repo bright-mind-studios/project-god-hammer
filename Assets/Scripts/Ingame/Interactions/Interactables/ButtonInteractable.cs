@@ -2,20 +2,20 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.XR.Interaction.Toolkit;
 
 public class ButtonInteractable : TouchInteractable
 {
+    public UnityAction OnPressButton;
     private Vector3 starPos; 
     [SerializeField] private Transform target;
-    [SerializeField] private float offset;
 
-    public delegate void OnPressButtonDelegate();
-    public event OnPressButtonDelegate OnPressButton;
+    private float offset = 0.01f;
 
     protected override void Init()
     {
-        starPos = transform.position;
+        starPos = target.position;
     }
 
     public override void OnHoverEnter(HoverEnterEventArgs args){
