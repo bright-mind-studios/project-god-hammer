@@ -13,17 +13,9 @@ MonoBehaviour:
   m_Name: Peltre
   m_EditorClassIdentifier: 
   itemname: Peltre
-<<<<<<< Updated upstream
-  prefab: {fileID: 0}
-  sprite: {fileID: 0}
-  alloyings:
-  - {fileID: 11400000, guid: ecdabd2bae739434d8bc7c56c68b3589, type: 2}
-  - {fileID: 11400000, guid: 9556d1d7bbea3b84391033f914312183, type: 2}
-=======
   prefab: {fileID: 8387612514793452275, guid: 1c574804f7300cd4486548724bf77c91, type: 3}
   sprite: {fileID: 949468179817576097, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   primaryMetal: {fileID: 11400000, guid: ecdabd2bae739434d8bc7c56c68b3589, type: 2}
   secondaryMetal: {fileID: 11400000, guid: 9556d1d7bbea3b84391033f914312183, type: 2}
   primaryColor: {r: 0.69803923, g: 0.3882353, b: 0.23921569, a: 1}
   secondaryColor: {r: 0.34901962, g: 0.30980393, b: 0.2901961, a: 1}
->>>>>>> Stashed changes

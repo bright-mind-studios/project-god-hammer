@@ -13,17 +13,9 @@ MonoBehaviour:
   m_Name: Metal de rose
   m_EditorClassIdentifier: 
   itemname: Metal de rose
-<<<<<<< Updated upstream
-  prefab: {fileID: 0}
-  sprite: {fileID: 0}
-  alloyings:
-  - {fileID: 11400000, guid: 164b88d4397418f4580616ec7540f745, type: 2}
-  - {fileID: 11400000, guid: 9556d1d7bbea3b84391033f914312183, type: 2}
-=======
   prefab: {fileID: 8387612514793452275, guid: 1c574804f7300cd4486548724bf77c91, type: 3}
   sprite: {fileID: 6790127075777507764, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   primaryMetal: {fileID: 11400000, guid: 164b88d4397418f4580616ec7540f745, type: 2}
   secondaryMetal: {fileID: 11400000, guid: 9556d1d7bbea3b84391033f914312183, type: 2}
   primaryColor: {r: 0.41960785, g: 0.6313726, b: 0.43529412, a: 1}
   secondaryColor: {r: 0.34901962, g: 0.30980393, b: 0.2901961, a: 1}
->>>>>>> Stashed changes
