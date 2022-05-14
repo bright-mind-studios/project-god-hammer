@@ -441,7 +441,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.71630335, y: 0.22590905, z: 0.0850331}
   m_Center: {x: 0.00000063923, y: 0.35699058, z: -0.00000013720842}
---- !u!114 &4542565818096429465
+--- !u!114 &5723433621982543360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -450,16 +450,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 26026571207012592}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91b337b3979384d44b8c4398770f05d0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ab8af5ae30b2734e9656052a4c72cfa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neededSpeed: 1
+  metalOrePrefab: {fileID: 5463500256541360898, guid: 86988fe449607f24f8472ed0f8e58ca9, type: 3}
+  spawnPoint: {fileID: 0}
+  defaultMetal: {fileID: 11400000, guid: bfb20a9f64124bf419b5719ccc67dc02, type: 2}
+  cooldownrock: 5
+  rock_enabled: 0
+--- !u!114 &6071374439995333721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26026571207012592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e11932ccb48ac04ba32346873304db2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
-  m_Colliders: []
+  m_Colliders:
+  - {fileID: 908916607255828267}
   m_InteractionLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 4
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -556,21 +575,3 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &5723433621982543360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 26026571207012592}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ab8af5ae30b2734e9656052a4c72cfa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  neededSpeed: 1
-  metalOrePrefab: {fileID: 5463500256541360898, guid: 86988fe449607f24f8472ed0f8e58ca9, type: 3}
-  spawnPoint: {fileID: 0}
-  defaultMetal: {fileID: 11400000, guid: bfb20a9f64124bf419b5719ccc67dc02, type: 2}
-  max_rocks: 5
-  cooldownrock: 5

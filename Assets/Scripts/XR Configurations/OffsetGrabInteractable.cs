@@ -7,7 +7,7 @@ public class OffsetGrabInteractable : XRGrabInteractable
     private Quaternion interactorRotation = Quaternion.identity;
     private GameObject _attach;
 
-    private void Awake()
+    protected override void Awake()
     {
         base.Awake();
         _attach = new GameObject("Attach");
@@ -20,7 +20,7 @@ public class OffsetGrabInteractable : XRGrabInteractable
     {
         base.OnSelectEntered(interactor);
         StoreInteractor(interactor);
-        MatchAttachmentPoints(interactor);
+        if (!(interactor is XRSocketInteractor)) MatchAttachmentPoints(interactor);
     }
 
     private void StoreInteractor(XRBaseInteractor interactor)
@@ -41,7 +41,7 @@ public class OffsetGrabInteractable : XRGrabInteractable
     {
         base.OnSelectExited(interactor);
         ResetAttachmentPoints(interactor);
-        ClearInteractor(interactor);
+        if (!(interactor is XRSocketInteractor)) ClearInteractor(interactor);
     }
 
     private void ResetAttachmentPoints(XRBaseInteractor interactor)

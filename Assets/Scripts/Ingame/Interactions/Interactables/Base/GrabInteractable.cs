@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class GrabInteractable : XRGrabInteractable, IBaseInteractable{
+public class GrabInteractable : OffsetGrabInteractable, IBaseInteractable{
     private bool _grip, _trigger;
     public bool IsOnGrip { get => _grip; set => _grip = value; }
     public bool IsOnTrigger { get => _trigger; set => _trigger = value; }
