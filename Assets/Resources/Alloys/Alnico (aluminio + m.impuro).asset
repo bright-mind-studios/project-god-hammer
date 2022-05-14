@@ -17,5 +17,5 @@ MonoBehaviour:
   sprite: {fileID: -3219267994322507524, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   primaryMetal: {fileID: 11400000, guid: df4b02aa79f2a8d48a2a6adae3c2b889, type: 2}
   secondaryMetal: {fileID: 11400000, guid: bfb20a9f64124bf419b5719ccc67dc02, type: 2}
-  primaryColor: {r: 0.28816465, g: 0.2264151, b: 0.3018868, a: 1}
-  secondaryColor: {r: 0.28627452, g: 0.22745098, b: 0.3019608, a: 1}
+  primaryColor: {r: 0.4862745, g: 0.34509805, b: 0.5176471, a: 1}
+  secondaryColor: {r: 0.69803923, g: 0.3882353, b: 0.23921569, a: 1}

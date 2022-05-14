@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: "Esta\xF1o"
   prefab: {fileID: 0}
-  sprite: {fileID: 0}
+  sprite: {fileID: -2086637543514032231, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+  color: {r: 0.4203898, g: 0.6320754, b: 0.43468484, a: 1}
   tier: 0

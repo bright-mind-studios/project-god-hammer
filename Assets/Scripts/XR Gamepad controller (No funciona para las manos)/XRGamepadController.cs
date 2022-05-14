@@ -26,7 +26,6 @@ public class XRGamepadController : MonoBehaviour
         main.transform.position += mainMoveInputValue * movementspeed * Time.deltaTime;
         left.transform.position += leftMoveInputValue * movementspeed * Time.deltaTime;
         right.transform.position += rightMoveInputValue * movementspeed * Time.deltaTime;
-        //Debug.Log(leftMoveInputValue);
     }
 
 }
