@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: Metal de rose
   prefab: {fileID: 8387612514793452275, guid: 1c574804f7300cd4486548724bf77c91, type: 3}
-  sprite: {fileID: 0}
-  primaryMetal: {fileID: 0}
-  secondaryMetal: {fileID: 0}
+  sprite: {fileID: 6790127075777507764, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+  primaryMetal: {fileID: 11400000, guid: 164b88d4397418f4580616ec7540f745, type: 2}
+  secondaryMetal: {fileID: 11400000, guid: 9556d1d7bbea3b84391033f914312183, type: 2}
   primaryColor: {r: 0, g: 0, b: 0, a: 0}
   secondaryColor: {r: 0, g: 0, b: 0, a: 0}

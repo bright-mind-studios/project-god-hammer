@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: Metal impuro
   prefab: {fileID: 0}
-  sprite: {fileID: 0}
-  tier: 3
+  sprite: {fileID: -4582280273805442333, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 1}
+  tier: 3

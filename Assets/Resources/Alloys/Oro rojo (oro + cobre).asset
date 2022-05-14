@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f31552598a39a62468bd757b86355f92, type: 3}
-  m_Name: Laton
+  m_Name: Oro rojo (oro + cobre)
   m_EditorClassIdentifier: 
-  itemname: Laton
+  itemname: Peltre
   prefab: {fileID: 8387612514793452275, guid: 1c574804f7300cd4486548724bf77c91, type: 3}
-  sprite: {fileID: 0}
-  primaryMetal: {fileID: 0}
-  secondaryMetal: {fileID: 0}
+  sprite: {fileID: 7749685275952921943, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+  primaryMetal: {fileID: 11400000, guid: 7944a47e14da11f4eac9bff0923cc673, type: 2}
+  secondaryMetal: {fileID: 11400000, guid: ecdabd2bae739434d8bc7c56c68b3589, type: 2}
   primaryColor: {r: 0, g: 0, b: 0, a: 0}
-  secondaryColor: {r: 0, g: 0, b: 0, a: 0}
+  secondaryColor: {r: 0.69803923, g: 0.3882353, b: 0.23921569, a: 1}

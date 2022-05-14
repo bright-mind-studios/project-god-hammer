@@ -18,4 +18,4 @@ MonoBehaviour:
   - {x: 0.85, y: 0.85, z: 0}
   - {x: -0.85, y: 0.85, z: 0}
   moldPrefab: {fileID: 7686040138262868653, guid: 5ca3054b8355bc1459780d596cd6e8b5, type: 3}
-  weaponPrefab: {fileID: 7272324366909938306, guid: db0cfbb988d48944f937b16153449014, type: 3}
+  weaponPrefab: {fileID: 8559120721087213780, guid: bd09257288a6a074895f437765b01f2d, type: 3}

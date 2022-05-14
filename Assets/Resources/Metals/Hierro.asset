@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: Hierro
   prefab: {fileID: 0}
-  sprite: {fileID: 0}
-  tier: 1
+  sprite: {fileID: 4222713946308856878, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   color: {r: 0.371885, g: 0.4678299, b: 0.5754717, a: 1}
+  tier: 1

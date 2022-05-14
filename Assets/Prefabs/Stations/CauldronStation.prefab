@@ -53,6 +53,26 @@ MonoBehaviour:
   secondaryMetal: {fileID: 0}
   allAlloys:
   - {fileID: 11400000, guid: d3288ab6f3ae4cc4b80376f092e472c1, type: 2}
+  - {fileID: 11400000, guid: 5378695991077594d9a7cc83cbd15609, type: 2}
+  - {fileID: 11400000, guid: 55e3b21828a890344a388870f0d4d337, type: 2}
+  - {fileID: 11400000, guid: 2acf1271841531f41845a762c6ea9428, type: 2}
+  - {fileID: 11400000, guid: fe1989cdcb8b13d4d8c0e6aa99c89aae, type: 2}
+  - {fileID: 11400000, guid: 78fab67b01ac2a645b6050c21ca93624, type: 2}
+  - {fileID: 11400000, guid: 89e247a9746534a4d80fcb388d0f104d, type: 2}
+  - {fileID: 11400000, guid: 912d322a13d53fd49bfa48a75e4f4a63, type: 2}
+  - {fileID: 11400000, guid: 5513ffe38f381604981051fed535076d, type: 2}
+  - {fileID: 11400000, guid: 75aef407264359e45b17651bc9b9df32, type: 2}
+  - {fileID: 11400000, guid: a36ffa8485a6a1546856abd086a34c48, type: 2}
+  - {fileID: 11400000, guid: 354341450924c0e4ea4a0228c2e581e9, type: 2}
+  - {fileID: 11400000, guid: 2ef2b956d59d1594e8fd81a38bae13ff, type: 2}
+  - {fileID: 11400000, guid: 374716f6e13d74249914be2932b7df27, type: 2}
+  - {fileID: 11400000, guid: 40c0562cf261a0740aa32494a8027140, type: 2}
+  - {fileID: 11400000, guid: f627034e61308174d8baeca039ee408b, type: 2}
+  - {fileID: 11400000, guid: a6f34a0b3bbda17479eaf6919cad426b, type: 2}
+  - {fileID: 11400000, guid: ed3bfe1474fa25341a3a0cbd118dd15e, type: 2}
+  - {fileID: 11400000, guid: 4d8884d9a94fc7f47834451d3c2156d9, type: 2}
+  - {fileID: 11400000, guid: 7ebfe5ad25278064bb7b6a2ce7868136, type: 2}
+  - {fileID: 11400000, guid: 9a5b51ccd6c5c6a40b8b666ede71de7f, type: 2}
   ingotPrefab: {fileID: 8387612514793452275, guid: 1c574804f7300cd4486548724bf77c91, type: 3}
   spawnPoint: {fileID: 2181336415645270826}
 --- !u!1 &2181336415563162173
