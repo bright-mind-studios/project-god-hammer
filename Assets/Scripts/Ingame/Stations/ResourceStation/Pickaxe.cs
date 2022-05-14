@@ -13,8 +13,6 @@ public class Pickaxe : MonoBehaviour
 
     public Metal defaultMetal;
 
-    public int max_rocks = 5;
-
     public float cooldownrock = 5f;
 
     public bool rock_enabled;
@@ -24,7 +22,7 @@ public class Pickaxe : MonoBehaviour
 
     public IEnumerator cooldownRoutine(){
         rock_enabled = false;
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(cooldownrock);
         rock_enabled = true;
 
     }
