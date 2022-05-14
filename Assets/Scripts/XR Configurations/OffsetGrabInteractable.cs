@@ -1,10 +1,19 @@
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine;
 
-public class OffsetGrab : XRGrabInteractable
+public class OffsetGrabInteractable : XRGrabInteractable
 {
     private Vector3 interactorPosition = Vector3.zero;
     private Quaternion interactorRotation = Quaternion.identity;
+    private GameObject _attach;
+
+    private void Awake()
+    {
+        base.Awake();
+        _attach = new GameObject("Attach");
+        _attach.transform.SetParent(transform, false);
+        attachTransform = _attach.transform;
+    }
 
     [System.Obsolete]
     protected override void OnSelectEntered(XRBaseInteractor interactor)

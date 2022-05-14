@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class TransparentGrab : OffsetGrab
+public class TransparentGrabInteractable : OffsetGrabInteractable
 {
     private Material interactorMaterial;
     private SkinnedMeshRenderer interactorRenderer;
