@@ -6,6 +6,7 @@ public class Cell : MonoBehaviour
     private float _cellSize;
     private Vector3 _worldPosition;
     private GameObject _environmentEntity;
+    private EnvironmentEntity _entity;
     private GameObject _minigame;
 
     public int X { get { return _x; } private set { } }
@@ -22,22 +23,9 @@ public class Cell : MonoBehaviour
         GetComponent<Transform>().position = _worldPosition;
     }
 
-    private void SetEntityIcon(GameObject parent ,Sprite sprite, Color color)
-    {
-        // Minimap Icon
-        GameObject iconMinimap = new GameObject("MinimapIcon");
-        iconMinimap.transform.SetParent(parent.transform, true);
-        iconMinimap.layer = LayerMask.NameToLayer("Minimap");
-        iconMinimap.transform.localScale = new Vector3(1f * _cellSize/3, 1f * _cellSize/3, 1f);
-        iconMinimap.transform.Rotate(-90f, 0f, 0f, Space.World);
-        iconMinimap.transform.position = new Vector3(parent.transform.position.x, GameObject.FindGameObjectWithTag("MinimapCamera").transform.position.y-1f, parent.transform.position.z);
-        SpriteRenderer icon = iconMinimap.AddComponent<SpriteRenderer>();
-        icon.sprite = sprite;
-        icon.color = color;
-    }
-
     public GameObject PlaceEntity(EnvironmentEntity entity)
     {
+        _entity = entity;
         GameObject entityHolder = new GameObject("entity");
         entityHolder.transform.parent = gameObject.transform;
         entityHolder.transform.position = _worldPosition;
@@ -60,8 +48,6 @@ public class Cell : MonoBehaviour
             }
         }
 
-        if (entity.resourceProvider) SetEntityIcon(entityHolder, entity.mapSprite, new Color(entity.placeholderColor.r, entity.placeholderColor.g, entity.placeholderColor.b));
-
         _minigame = entity.minigame;
 
         return _environmentEntity;
@@ -78,10 +64,21 @@ public class Cell : MonoBehaviour
 
         Destroy(_environmentEntity);
         _environmentEntity = null;
+        _entity = null;
     }
 
     public GameObject GetMinigame()
     {
         return _minigame;
+    }
+
+    public EnvironmentEntity GetCompleteEntity()
+    {
+        return _entity;
+    }
+
+    public bool IsResourceProvider()
+    {
+        return _entity != null && _entity.resourceProvider;
     }
 }

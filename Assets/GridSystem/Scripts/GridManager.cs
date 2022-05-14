@@ -168,4 +168,14 @@ public class GridManager : MonoBehaviour
     {
         return _gridMap[index].GetMinigame();
     }
+
+    public void LoadEntitiesIcons(MapSnapping mapSnapping)
+    {
+        foreach (Cell cell in _gridMap)
+        {
+            if (!cell.IsResourceProvider()) continue;
+            EnvironmentEntity entity = cell.GetCompleteEntity();
+            mapSnapping.SetIcon(cell.X, cell.Z, entity.mapSprite);
+        }
+    }
 }
