@@ -6,9 +6,9 @@ using System;
 
 public class QuestGenerator : MonoBehaviour
 {
+
     public WeaponShape[] allWeapons;
     public Element[] allElements;
-
     public int maxWeaponLevel = 3;
     public int maxElementLevel = 5;
 
@@ -32,6 +32,7 @@ public class QuestGenerator : MonoBehaviour
                     (element) => element.GetLevel() >= Mathf.Min(UnityEngine.Random.Range(1, level + 1), maxElementLevel))
                     .OrderBy(x => UnityEngine.Random.value).First();
         weapon.level = UnityEngine.Random.Range(1, maxWeaponLevel + 1);
+
         quest.weapon = weapon;
         return quest;
     }

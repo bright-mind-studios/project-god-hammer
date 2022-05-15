@@ -9,7 +9,6 @@ public class QuestDisplay : MonoBehaviour
     [SerializeField] GameObject canvas;
     [SerializeField] Image spr_base, spr_M1, spr_M2;
     [SerializeField] TextMeshProUGUI name_text, level_text;
-
     
     public void RenderQuest(Quest quest)
     {
