@@ -21,6 +21,7 @@ MonoBehaviour:
   localPosition: {x: 0, y: 0, z: 0}
   prefab: {fileID: 9073540666229958091, guid: f3fc2cb863d85864a95a2c8b64fa48ad, type: 3}
   minigamePrefab: {fileID: 0}
-  minigameEvents: {fileID: 0}
+  minigameEvents: {fileID: 8359676283272054883, guid: 8cb5bc8d642e60f4897112676fb1d062, type: 3}
+
   resourceUses: 3
   mapSprite: {fileID: 112372805973753100, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
