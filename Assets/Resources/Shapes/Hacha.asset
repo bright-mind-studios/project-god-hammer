@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0edc9ccd6a75d174b94eeaec2391acdb, type: 3}
-  m_Name: Hammer
+  m_Name: Hacha
   m_EditorClassIdentifier: 
   points:
   - {x: -0.85, y: -0.85, z: 0}
   - {x: 0.85, y: -0.85, z: 0}
   - {x: 0.85, y: 0.85, z: 0}
   - {x: -0.85, y: 0.85, z: 0}
-  moldPrefab: {fileID: 6234441701062659630, guid: 9baab16320e1ba2459bf2306a1872efe, type: 3}
-  weaponPrefab: {fileID: 527138702709204076, guid: 00068825e30feec4f8c9c1c196f22eb3, type: 3}
+  moldPrefab: {fileID: 6812032845723455840, guid: 69aed7f7eb4ddab4ea53193b52b96cb4, type: 3}
+  weaponPrefab: {fileID: 8223655097084462367, guid: a1a5a35e26869e844a8cf4fa40f131fc, type: 3}

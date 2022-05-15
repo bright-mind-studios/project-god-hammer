@@ -186,8 +186,8 @@ MonoBehaviour:
     element: {fileID: 0}
     shape: {fileID: 11400000, guid: 6f3e4656d73afb343a6fa4e1da9121f3, type: 2}
     level: 0
-  M1: {fileID: 0}
-  M2: {fileID: 0}
+  M1: {fileID: 2983000119473632689}
+  M2: {fileID: 3487175936141514928}
 --- !u!1 &1986614794891368885
 GameObject:
   m_ObjectHideFlags: 0

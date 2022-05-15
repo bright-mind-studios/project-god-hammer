@@ -9,6 +9,8 @@ public class Alloy : Element
 
     public Color primaryColor, secondaryColor;
 
+    public override int GetLevel() => primaryMetal.GetLevel() + secondaryMetal.GetLevel();
+
     public override Color GetPrimaryColor() => primaryColor;
 
     public override Color GetSecondaryColor() => secondaryColor;

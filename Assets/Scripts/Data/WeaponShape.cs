@@ -7,8 +7,9 @@ public class WeaponShape : ScriptableObject
 {
     public Vector3[] points;
     public GameObject moldPrefab;
-
     public GameObject weaponPrefab;
+
+    public Sprite spr_base, spr_M1, spr_M2;
 
     [ContextMenu("RenderShape")]
     public void RenderShape()
