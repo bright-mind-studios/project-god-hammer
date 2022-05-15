@@ -41,6 +41,7 @@ public class MinigameManager : MonoBehaviour
         _entity.minigameEvents.OnResourceUnload(resourceStation); // Que se guarde valor en la corrutina, crear metodo de spawn aqui - Unload quitar estacion, parar corrutinas, etc
         _entity = null;
         _index = -1;
+
     }
 
     public void UseResource()
