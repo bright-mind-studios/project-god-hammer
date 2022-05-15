@@ -8,6 +8,7 @@ public class WorldManager : MonoBehaviour
     [SerializeField] private GridManager _gridManager;
     [SerializeField] private GridMovement _gridMovement;
     [SerializeField] private MapSnapping _mapSnapping;
+    [SerializeField] private MinigameManager _minigameManager;
     [SerializeField] private GameObject _map;
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,7 @@ public class WorldManager : MonoBehaviour
 
         float mapCellSize = ComputeMapCellSize(_gridManager.CellSize);
         _mapSnapping.Initialize(mapCellSize, _gridManager.WorldRadius, _map.transform);
-        _gridMovement.Initialize(_gridManager, _mapSnapping);
+        _gridMovement.Initialize(_gridManager, _mapSnapping, _minigameManager);
         _gridManager.LoadEntitiesIcons(_mapSnapping);
     }
 

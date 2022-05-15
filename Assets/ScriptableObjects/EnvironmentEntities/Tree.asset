@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Tree
   resourceProvider: 1
+  requireResourceStation: 1
   terrainModifier: 0
   spawnChance: 0.136
   localScale: {x: 0.5, y: 0.2, z: 0.5}
   localPosition: {x: 0, y: 0, z: 0}
   prefab: {fileID: 9073540666229958091, guid: f3fc2cb863d85864a95a2c8b64fa48ad, type: 3}
-  minigame: {fileID: 3033950264528817972, guid: 5da1fdc2bf90a0845a609f3600b43e23, type: 3}
+  minigamePrefab: {fileID: 0}
+  minigameEvents: {fileID: 0}
+  resourceUses: 3
   mapSprite: {fileID: 112372805973753100, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}

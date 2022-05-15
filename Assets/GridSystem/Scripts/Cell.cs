@@ -7,7 +7,6 @@ public class Cell : MonoBehaviour
     private Vector3 _worldPosition;
     private GameObject _environmentEntity;
     private EnvironmentEntity _entity;
-    private GameObject _minigame;
 
     public int X { get { return _x; } private set { } }
     public int Z { get { return _z; } private set { } }
@@ -48,8 +47,6 @@ public class Cell : MonoBehaviour
             }
         }
 
-        _minigame = entity.minigame;
-
         return _environmentEntity;
     }
 
@@ -67,12 +64,7 @@ public class Cell : MonoBehaviour
         _entity = null;
     }
 
-    public GameObject GetMinigame()
-    {
-        return _minigame;
-    }
-
-    public EnvironmentEntity GetCompleteEntity()
+    public EnvironmentEntity GetEntity()
     {
         return _entity;
     }
