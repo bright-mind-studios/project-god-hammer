@@ -29,7 +29,7 @@ public class MinigameManager : MonoBehaviour
 
         if (_entity.minigamePrefab != null) _minigamePrefab = Instantiate(_entity.minigamePrefab, _spawnPlace.transform, false);
 
-        _entity.minigameEvents.OnResourceLoad(resourceStation);
+        _entity.minigameEvents.OnResourceLoad(resourceStation, this);
         UseResource();
     }
 
@@ -60,6 +60,16 @@ public class MinigameManager : MonoBehaviour
             _entity.minigameEvents.OnResourceDestroy(this); // que llame a la reaparicion
             Unload();
         }
+    }
+
+    public GameObject GetResourceInstance()
+    {
+        return _gridManager.GetCellInstance(_index);
+    }
+
+    public GameObject GetResourceMinigame()
+    {
+        return _minigamePrefab;
     }
 
     public void ClearResourceAndRespawn()

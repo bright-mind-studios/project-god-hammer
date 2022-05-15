@@ -69,6 +69,11 @@ public class Cell : MonoBehaviour
         return _entity;
     }
 
+    public GameObject GetEntityInstance()
+    {
+        return _environmentEntity;
+    }
+
     public bool IsResourceProvider()
     {
         return _entity != null && _entity.resourceProvider;

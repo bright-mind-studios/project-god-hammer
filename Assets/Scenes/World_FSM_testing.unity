@@ -1470,6 +1470,7 @@ GameObject:
   - component: {fileID: 833431929}
   - component: {fileID: 833431926}
   - component: {fileID: 833431928}
+  - component: {fileID: 833431930}
   m_Layer: 0
   m_Name: World_Spawner
   m_TagString: Untagged
@@ -1554,6 +1555,48 @@ MonoBehaviour:
   _mapSnapping: {fileID: 1369637714}
   _minigameManager: {fileID: 1450951307}
   _map: {fileID: 1679571133}
+--- !u!114 &833431930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833431925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0f8afdbfe5ca64a8522413ccf20d47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allWeapons:
+  - {fileID: 11400000, guid: 3c4c3371c020ae44d925474d5f5f38fe, type: 2}
+  - {fileID: 11400000, guid: d3d25eb9517a1064f9817ea146da7888, type: 2}
+  - {fileID: 11400000, guid: afbe13c314b3e1748a976b489aeca15b, type: 2}
+  - {fileID: 11400000, guid: 7aa38deb70667f842b0d197dc9dbded8, type: 2}
+  - {fileID: 11400000, guid: 6f3e4656d73afb343a6fa4e1da9121f3, type: 2}
+  allElements:
+  - {fileID: 11400000, guid: d3288ab6f3ae4cc4b80376f092e472c1, type: 2}
+  - {fileID: 11400000, guid: 5378695991077594d9a7cc83cbd15609, type: 2}
+  - {fileID: 11400000, guid: 55e3b21828a890344a388870f0d4d337, type: 2}
+  - {fileID: 11400000, guid: 2acf1271841531f41845a762c6ea9428, type: 2}
+  - {fileID: 11400000, guid: fe1989cdcb8b13d4d8c0e6aa99c89aae, type: 2}
+  - {fileID: 11400000, guid: 78fab67b01ac2a645b6050c21ca93624, type: 2}
+  - {fileID: 11400000, guid: 89e247a9746534a4d80fcb388d0f104d, type: 2}
+  - {fileID: 11400000, guid: 912d322a13d53fd49bfa48a75e4f4a63, type: 2}
+  - {fileID: 11400000, guid: 5513ffe38f381604981051fed535076d, type: 2}
+  - {fileID: 11400000, guid: 75aef407264359e45b17651bc9b9df32, type: 2}
+  - {fileID: 11400000, guid: a36ffa8485a6a1546856abd086a34c48, type: 2}
+  - {fileID: 11400000, guid: 354341450924c0e4ea4a0228c2e581e9, type: 2}
+  - {fileID: 11400000, guid: 2ef2b956d59d1594e8fd81a38bae13ff, type: 2}
+  - {fileID: 11400000, guid: 374716f6e13d74249914be2932b7df27, type: 2}
+  - {fileID: 11400000, guid: 40c0562cf261a0740aa32494a8027140, type: 2}
+  - {fileID: 11400000, guid: f627034e61308174d8baeca039ee408b, type: 2}
+  - {fileID: 11400000, guid: a6f34a0b3bbda17479eaf6919cad426b, type: 2}
+  - {fileID: 11400000, guid: ed3bfe1474fa25341a3a0cbd118dd15e, type: 2}
+  - {fileID: 11400000, guid: 4d8884d9a94fc7f47834451d3c2156d9, type: 2}
+  - {fileID: 11400000, guid: 7ebfe5ad25278064bb7b6a2ce7868136, type: 2}
+  - {fileID: 11400000, guid: 9a5b51ccd6c5c6a40b8b666ede71de7f, type: 2}
+  maxWeaponLevel: 3
+  maxElementLevel: 5
 --- !u!1 &854616849
 GameObject:
   m_ObjectHideFlags: 0

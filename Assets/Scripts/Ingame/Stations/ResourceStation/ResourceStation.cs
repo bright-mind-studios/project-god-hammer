@@ -37,11 +37,6 @@ public class ResourceStation : MonoBehaviour
         StartCoroutine(WoodLogEvent());
     }
 
-    public void StopStation()
-    {
-        StopAllCoroutines();
-    }
-
     private IEnumerator MetalRockEvent()
     {
         metalRock.active();

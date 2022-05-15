@@ -171,6 +171,11 @@ public class GridManager : MonoBehaviour
         return _gridMap[index].GetEntity();
     }
 
+    public GameObject GetCellInstance(int index)
+    {
+        return _gridMap[index].GetEntityInstance();
+    }
+
     public void LoadEntitiesIcons(MapSnapping mapSnapping)
     {
         foreach (Cell cell in _gridMap)

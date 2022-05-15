@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Village
   resourceProvider: 1
+  requireResourceStation: 0
   terrainModifier: 0
   spawnChance: 1
   localScale: {x: 0.5, y: 0.2, z: 0.5}
   localPosition: {x: 0.55, y: 0, z: -1.84}
   prefab: {fileID: 5353600119847181726, guid: 476abfdce21789d448306ee546497b43, type: 3}
-  minigamePrefab: {fileID: 0}
-  minigameEvents: {fileID: 0}
+  minigamePrefab: {fileID: 5353600119847181726, guid: 306112f39d000264d821a34030926c22, type: 3}
+  minigameEvents: {fileID: 3392067534824806788, guid: 62f562f22ee0d1148935b0c6aac24f76, type: 3}
   resourceUses: -1
   mapSprite: {fileID: 3947061164568741086, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}

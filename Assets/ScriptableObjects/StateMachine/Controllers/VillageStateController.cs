@@ -9,6 +9,7 @@ public class VillageStateController : BaseStateController
     [HideInInspector] public WorldStateController worldController; //maybe should hide it and find it on Awake
     [HideInInspector] public AudioSource audioSource;
     [HideInInspector] public ArmourBar armourBar;
+    [HideInInspector] public Quest currentQuest;
 
 
     public override void InitializeStateMachine(bool activate)
