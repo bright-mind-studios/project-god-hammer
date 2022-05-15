@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0edc9ccd6a75d174b94eeaec2391acdb, type: 3}
-  m_Name: Sword
+  m_Name: Espada
   m_EditorClassIdentifier: 
   points:
   - {x: -0.85, y: -0.85, z: 0}

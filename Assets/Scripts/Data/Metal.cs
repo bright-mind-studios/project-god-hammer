@@ -6,16 +6,21 @@ using UnityEngine;
 public class Metal : Element
 {
     public enum Tier{
-        low,
-        mid,
-        high,
-        special
+        low = 1,
+        mid = 2,
+        high = 3,
+        special = 0
     }
+
+    public Tier tier;
 
     public Color color;
 
     public override Color GetPrimaryColor() => color;
 
     public override Color GetSecondaryColor() => color;
-    public Tier tier;
+
+    public override int GetLevel() => (int) tier;
+
+    
 }
