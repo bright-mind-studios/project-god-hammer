@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 6109351637888267960}
   - component: {fileID: 6109351637888267961}
   - component: {fileID: 6109351637888267966}
+  - component: {fileID: 803247683400986816}
   m_Layer: 0
   m_Name: Cutter
   m_TagString: Untagged
@@ -939,6 +940,20 @@ MonoBehaviour:
     m_Bits: 2048
   maxdistance: 4
   marker: {fileID: 6109351637944191276}
+--- !u!114 &803247683400986816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6109351637888267964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d8de62207c75b9439c7410f45c1ea35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reset_point: {x: 0, y: 0, z: 0}
+  resetDelayTime: 5
 --- !u!1 &6109351637921463839
 GameObject:
   m_ObjectHideFlags: 0

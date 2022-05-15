@@ -275,6 +275,11 @@ MonoBehaviour:
   metalRock: {fileID: 6195168327946266899}
   woodLog: {fileID: 4624704795169764780}
   base_tf: {fileID: 4517967012512464357}
+  pickaxe: {fileID: 5543695105507254735}
+  axe: {fileID: 5543695106124450923}
+  OnEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
   time: 30
   speed: 90
 --- !u!1 &4624704794897911452
@@ -803,6 +808,11 @@ PrefabInstance:
       objectReference: {fileID: 5463500256541360898, guid: 86988fe449607f24f8472ed0f8e58ca9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 735b4326eb6c62c4b9ef3de0f0b65d85, type: 3}
+--- !u!1 &5543695105507254735 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 26026571207012592, guid: 735b4326eb6c62c4b9ef3de0f0b65d85, type: 3}
+  m_PrefabInstance: {fileID: 5526864886633009471}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3161365111289574472 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7452387031795983735, guid: 735b4326eb6c62c4b9ef3de0f0b65d85, type: 3}
@@ -977,5 +987,10 @@ PrefabInstance:
 --- !u!4 &6203680209791186938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 56548042059174904, guid: 53dbbf269cb89f94c8d57efb41192d15, type: 3}
+  m_PrefabInstance: {fileID: 6259722476345304066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5543695106124450923 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1887053592356563049, guid: 53dbbf269cb89f94c8d57efb41192d15, type: 3}
   m_PrefabInstance: {fileID: 6259722476345304066}
   m_PrefabAsset: {fileID: 0}

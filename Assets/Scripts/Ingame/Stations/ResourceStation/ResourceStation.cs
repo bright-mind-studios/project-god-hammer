@@ -9,10 +9,21 @@ public class ResourceStation : MonoBehaviour
     [SerializeField] private WoodLog woodLog;
     [SerializeField] private Transform base_tf;
 
+    public GameObject pickaxe, axe;
     public UnityEvent OnEndEvent;
 
     public float time = 8f;
     public float speed = 90f;
+
+    private void OnEnable() {
+        pickaxe?.SetActive(true);
+        axe?.SetActive(true);
+    }
+
+    private void OnDisable() {
+        pickaxe?.SetActive(false);
+        axe?.SetActive(false);
+    }
 
     [ContextMenu("metal")]
     public void GenerateMetalRock()
