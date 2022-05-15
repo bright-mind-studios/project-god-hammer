@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class QuestDisplay : MonoBehaviour
 {
-    [SerializeField] SpriteRenderer spr_base, spr_M1, spr_M2;
-    [SerializeField] Text name_text, level_text;
-
+    [SerializeField] GameObject canvas;
+    [SerializeField] Image spr_base, spr_M1, spr_M2;
+    [SerializeField] TextMeshProUGUI name_text, level_text;
     
     public void RenderQuest(Quest quest)
     {
@@ -22,17 +23,8 @@ public class QuestDisplay : MonoBehaviour
         level_text.text = weapon.level.ToString();
     }
 
-    public void Clear()
-    {
-        spr_base.gameObject.SetActive(false);
-        name_text.gameObject.SetActive(false);
-        level_text.gameObject.SetActive(false);
-    }
+    public void Clear() =>  canvas.SetActive(false);
 
-    public void Active()
-    {
-        spr_base.gameObject.SetActive(true);
-        name_text.gameObject.SetActive(true);
-        level_text.gameObject.SetActive(true);
-    }
+
+    public void Active() => canvas.SetActive(true);
 }

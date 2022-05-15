@@ -19,3 +19,7 @@ MonoBehaviour:
   - {x: -0.85, y: 0.85, z: 0}
   moldPrefab: {fileID: 7686040138262868653, guid: 5ca3054b8355bc1459780d596cd6e8b5, type: 3}
   weaponPrefab: {fileID: 8559120721087213780, guid: bd09257288a6a074895f437765b01f2d, type: 3}
+  spr_base: {fileID: -898742879883463745, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+  spr_M1: {fileID: -24226408317387162, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+  spr_M2: {fileID: -4581479283116042270, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+

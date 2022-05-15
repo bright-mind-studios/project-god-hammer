@@ -15,5 +15,5 @@ MonoBehaviour:
   itemname: Oro
   prefab: {fileID: 0}
   sprite: {fileID: -4880116724310927107, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
-  color: {r: 0.6792453, g: 0.54883444, b: 0.27233893, a: 1}
   tier: 2
+  color: {r: 0.6792453, g: 0.54883444, b: 0.27233893, a: 1}
