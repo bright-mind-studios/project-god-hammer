@@ -8,6 +8,8 @@ public class MapSnapping : MonoBehaviour
     [SerializeField] private Sprite _minimapSprite;
     [SerializeField] private Color _minimapColors;
 
+    public bool Enabled = false;
+
     private float _cellSize = 0;
     private int _worldRadius;
     private float _reciprocal;
@@ -35,6 +37,7 @@ public class MapSnapping : MonoBehaviour
         transform.position = GetSnappedPosition();
         _basePosition = new Vector2(_map.transform.position.x, _map.transform.position.z);
         SetMinimapIndicator(_map.gameObject);
+        Enabled = true;
     }
 
     public void Update()

@@ -50,6 +50,8 @@ public class GridManager : MonoBehaviour
             {
                 gameObject = _gridMap[cellIndex].PlaceEntity(entity);
                 _availableIndexes.Remove(cellIndex);
+                MapSnapping mapSnapping = GameObject.FindObjectOfType<MapSnapping>();
+                if (mapSnapping.Enabled) mapSnapping.SetIcon((int)GetXZ(cellIndex).x, (int)GetXZ(cellIndex).y, entity.mapSprite);
             }
 
         } while (gameObject == null);
@@ -177,5 +179,13 @@ public class GridManager : MonoBehaviour
             EnvironmentEntity entity = cell.GetEntity();
             mapSnapping.SetIcon(cell.X, cell.Z, entity.mapSprite);
         }
+    }
+
+    public void DestroyEntityOf(int index)
+    {
+        if (!CheckIndexOf(index)) return;
+
+        _gridMap[index].DestroyEntity();
+        GameObject.FindObjectOfType<MapSnapping>().DeleteIcon(index);
     }
 }

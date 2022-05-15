@@ -70,6 +70,6 @@ public class GridMovement : MonoBehaviour
 
         if (resource == null) return;
 
-        _minigameManager.LoadAndStart(resource);
+        _minigameManager.LoadAndStart(resource, _index);
     }
 }

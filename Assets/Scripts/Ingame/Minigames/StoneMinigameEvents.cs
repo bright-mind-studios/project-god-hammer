@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class StoneMinigameEvents : MinigameEvents
 {
-    public override void OnResourceDestroy()
+    public override void OnResourceDestroy(MinigameManager minigameManager)
     {
         Debug.Log("Me voy a generar a otra parte");
+        minigameManager.ClearResourceAndRespawn();
     }
 
     public override void OnResourceUse(ResourceStation resourceStation)

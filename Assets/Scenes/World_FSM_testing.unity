@@ -1102,6 +1102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResourceStation
       objectReference: {fileID: 0}
+    - target: {fileID: 4074964564692271136, guid: 68b7fe024b63de045b8cbbe84f4db408, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4074964564692275166, guid: 68b7fe024b63de045b8cbbe84f4db408, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2086,6 +2090,7 @@ MonoBehaviour:
   _controllerHeight: 0.1259
   _minimapSprite: {fileID: 21300000, guid: 4cbdd7fb3a50c7e49aa31561d236f4d3, type: 3}
   _minimapColors: {r: 1, g: 0.5947854, b: 0, a: 0}
+  Enabled: 0
 --- !u!114 &1369637715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2175,6 +2180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resourceStation: {fileID: 737525917}
   _spawnPlace: {fileID: 1399110242}
+  _secondsToRespawnResource: 10
 --- !u!1 &1521111551
 GameObject:
   m_ObjectHideFlags: 0

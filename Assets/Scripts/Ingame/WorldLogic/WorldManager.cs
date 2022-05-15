@@ -15,6 +15,7 @@ public class WorldManager : MonoBehaviour
     {
         _gridManager.Initialize(difficulty.villagesAmount);
         _controller.Initialize(difficulty, intensity);
+        _minigameManager.Initialize(_gridManager);
 
         float mapCellSize = ComputeMapCellSize(_gridManager.CellSize);
         _mapSnapping.Initialize(mapCellSize, _gridManager.WorldRadius, _map.transform);
