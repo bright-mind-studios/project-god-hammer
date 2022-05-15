@@ -7,6 +7,5 @@ public class Weapon
 {      
    public Element element;
    public WeaponShape shape;
-
    public int level = 0;
 }

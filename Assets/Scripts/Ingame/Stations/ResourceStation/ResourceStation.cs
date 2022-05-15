@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ResourceStation : MonoBehaviour
 {
     [SerializeField] private MetalRock metalRock;
     [SerializeField] private WoodLog woodLog;
     [SerializeField] private Transform base_tf;
+
+    public UnityEvent OnEndEvent;
 
     public float time = 8f;
     public float speed = 90f;
@@ -36,6 +39,7 @@ public class ResourceStation : MonoBehaviour
         }
         base_tf.rotation = Quaternion.AngleAxis(0, Vector3.up);
         metalRock.hide();
+        OnEndEvent?.Invoke();
 
     }
 
@@ -52,7 +56,7 @@ public class ResourceStation : MonoBehaviour
         }
         base_tf.rotation = Quaternion.AngleAxis(0, Vector3.up);
         woodLog.hide();
+        OnEndEvent?.Invoke();
     }
-
 
 }

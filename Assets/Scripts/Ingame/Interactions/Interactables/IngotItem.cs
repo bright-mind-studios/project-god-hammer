@@ -9,6 +9,7 @@ public class IngotItem : ResourceItem
         mpb = new MaterialPropertyBlock();
         this.resource = element;
         mpb.SetColor("_BaseColor", element.GetPrimaryColor());
+        mpb.SetColor("_BaseColor", element.GetSecondaryColor());
         GetComponentInChildren<Renderer>().SetPropertyBlock(mpb);            
     }
 }
