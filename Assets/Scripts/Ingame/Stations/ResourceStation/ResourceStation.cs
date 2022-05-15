@@ -10,7 +10,7 @@ public class ResourceStation : MonoBehaviour
     [SerializeField] private Transform base_tf;
 
     public GameObject pickaxe, axe;
-    public UnityEvent OnEndEvent;
+    public UnityEvent OnUseEndEvent;
 
     public float time = 8f;
     public float speed = 90f;
@@ -37,6 +37,11 @@ public class ResourceStation : MonoBehaviour
         StartCoroutine(WoodLogEvent());
     }
 
+    public void StopStation()
+    {
+        StopAllCoroutines();
+    }
+
     private IEnumerator MetalRockEvent()
     {
         metalRock.active();
@@ -50,7 +55,7 @@ public class ResourceStation : MonoBehaviour
         }
         base_tf.rotation = Quaternion.AngleAxis(0, Vector3.up);
         metalRock.hide();
-        OnEndEvent?.Invoke();
+        OnUseEndEvent?.Invoke();
 
     }
 
@@ -67,7 +72,7 @@ public class ResourceStation : MonoBehaviour
         }
         base_tf.rotation = Quaternion.AngleAxis(0, Vector3.up);
         woodLog.hide();
-        OnEndEvent?.Invoke();
+        OnUseEndEvent?.Invoke();
     }
 
 }

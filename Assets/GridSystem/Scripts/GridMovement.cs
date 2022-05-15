@@ -5,8 +5,7 @@ using UnityEngine;
 public class GridMovement : MonoBehaviour
 {
     [SerializeField] private GameObject cloudManager;
-    [SerializeField] private GameObject _spawnPlace;
-    private GameObject _minigame;
+    private MinigameManager _minigameManager;
 
     private GridManager _gridManager;
     private MapSnapping _mapSnapping;
@@ -14,10 +13,11 @@ public class GridMovement : MonoBehaviour
 
     private int _index;
 
-    public void Initialize(GridManager gridManager, MapSnapping mapSnapping)
+    public void Initialize(GridManager gridManager, MapSnapping mapSnapping, MinigameManager minigameManager)
     {
         _gridManager = gridManager;
         _mapSnapping = mapSnapping; 
+        _minigameManager = minigameManager;
     }
 
     public void Move()
@@ -61,15 +61,15 @@ public class GridMovement : MonoBehaviour
 
     private void DestroyMinigame()
     {
-        if (_minigame != null) Destroy(_minigame);
+        _minigameManager.Unload();
     }
 
     private void SpawnItem()
     {
-        GameObject minigame = _gridManager.GetMinigame(_index);
+        EnvironmentEntity resource = _gridManager.GetCellEntity(_index);
 
-        if (minigame == null) return;
+        if (resource == null) return;
 
-        _minigame = Instantiate(minigame,_spawnPlace.transform, false);
+        _minigameManager.LoadAndStart(resource);
     }
 }

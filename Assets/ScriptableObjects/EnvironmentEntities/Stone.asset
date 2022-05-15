@@ -14,10 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Stone
   resourceProvider: 1
+  requireResourceStation: 1
   terrainModifier: 0
   spawnChance: 0.125
   localScale: {x: 0.5, y: 0.2, z: 0.5}
   localPosition: {x: 1.84, y: 0, z: 3.11}
   prefab: {fileID: 830885419833549530, guid: e8e7d2604cda6f847a08e92a0246e7bb, type: 3}
-  minigame: {fileID: 909881928537339395, guid: 5408bdc3a41a0c74da046350cbaaad39, type: 3}
+  minigamePrefab: {fileID: 0}
+  minigameEvents: {fileID: 7802103687526969626, guid: 158b8375f126bc3488aea7036b17dacf, type: 3}
+  resourceUses: 3
   mapSprite: {fileID: -8406489901129824451, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}

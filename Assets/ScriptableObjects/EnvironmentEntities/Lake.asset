@@ -19,5 +19,7 @@ MonoBehaviour:
   localScale: {x: 0.5, y: 0.2, z: 0.5}
   localPosition: {x: 0.49, y: -0.21, z: 0.19}
   prefab: {fileID: 268118961561806861, guid: 66072c42e7f38924f90a2ea3e36cc606, type: 3}
+  minigamePrefab: {fileID: 0}
+  minigameEvents: {fileID: 0}
+  resourceUses: -1
   mapSprite: {fileID: 0}
-  placeholderColor: {r: 0, g: 0, b: 0, a: 0}

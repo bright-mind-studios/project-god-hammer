@@ -29,6 +29,7 @@ public class MetalRock : MonoBehaviour
     [ContextMenu("-- Active")]
     public void active()
     {
+        Start();
         Clear();
         for (int i = 0; i < num_ores; i++)
         {

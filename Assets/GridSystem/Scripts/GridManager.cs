@@ -164,9 +164,9 @@ public class GridManager : MonoBehaviour
         return _gridMap[index].gameObject.transform.position;
     }
 
-    public GameObject GetMinigame(int index)
+    public EnvironmentEntity GetCellEntity(int index)
     {
-        return _gridMap[index].GetMinigame();
+        return _gridMap[index].GetEntity();
     }
 
     public void LoadEntitiesIcons(MapSnapping mapSnapping)
@@ -174,7 +174,7 @@ public class GridManager : MonoBehaviour
         foreach (Cell cell in _gridMap)
         {
             if (!cell.IsResourceProvider()) continue;
-            EnvironmentEntity entity = cell.GetCompleteEntity();
+            EnvironmentEntity entity = cell.GetEntity();
             mapSnapping.SetIcon(cell.X, cell.Z, entity.mapSprite);
         }
     }
