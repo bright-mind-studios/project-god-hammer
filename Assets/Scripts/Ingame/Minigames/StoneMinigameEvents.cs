@@ -22,7 +22,7 @@ public class StoneMinigameEvents : MinigameEvents
         resourceStation.gameObject.SetActive(false);
     }
 
-    public override void OnResourceLoad(ResourceStation resourceStation)
+    public override void OnResourceLoad(ResourceStation resourceStation, MinigameManager minigameManager)
     {
         Debug.Log("Soy una piedra y me he creado");
         resourceStation.gameObject.SetActive(true);

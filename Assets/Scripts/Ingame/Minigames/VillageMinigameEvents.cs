@@ -2,29 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LogMinigameEvents : MinigameEvents
+public class VillageMinigameEvents : MinigameEvents
 {
     public override void OnResourceDestroy(MinigameManager minigameManager)
     {
         Debug.Log("Me voy a generar a otra parte");
-        minigameManager.ClearResourceAndRespawn();
     }
 
     public override void OnResourceUse(ResourceStation resourceStation)
     {
-        resourceStation.GenerateTree();
+        
     }
 
     public override void OnResourceUnload(ResourceStation resourceStation)
     {
         Debug.Log("Vuelve pronto!");
-        resourceStation.StopAllCoroutines();
-        resourceStation.gameObject.SetActive(false);
     }
 
     public override void OnResourceLoad(ResourceStation resourceStation, MinigameManager minigameManager)
     {
-        Debug.Log("Soy un arbol y me he creado");
-        resourceStation.gameObject.SetActive(true);
+        Debug.Log("Soy una aldea y me he creado");
+        SnoppyVillage snoppy = minigameManager.GetResourceMinigame().GetComponent<SnoppyVillage>();
+        ArmourBar armourBar = minigameManager.GetResourceInstance().transform.GetChild(0).GetChild(0).GetComponent<ArmourBar>();
+        snoppy.SnoppyBarTo(armourBar);
+        snoppy.SnoppyStateTo(minigameManager.GetResourceInstance().GetComponent<VillageStateController>());
     }
 }
