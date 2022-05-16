@@ -14,7 +14,7 @@ public class LoseAction : Action
     {
         if (controller.stateBoolVariable) return;
 
-        Debug.Log("END GAME");
+        Debug.Log("END GAME: ALL VILLAGE WERE DESTROYED");
         controller.stateBoolVariable = true;
     }
 }

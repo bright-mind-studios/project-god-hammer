@@ -15,7 +15,7 @@ public class ProtectAction : Action
         if (controller.stateBoolVariable) return;
 
         controller.armourBar.ActivateArmour();
-        WorldStatus status = new WorldStatus(controller.gameObject, true);
+        WorldStatus status = new WorldStatus(controller.gameObject, false);
         controller.worldController.FromStatePushTransitionToState(pushLaunchTransitions[0].demandState, pushLaunchTransitions[0].pushedState, false, status);
         // Change bar to protected
         // Inform world

@@ -13,10 +13,14 @@ public class MinigameManager : MonoBehaviour
     private int _uses;
     private int _index;
 
+    private bool _minigameEnabled;
+
     public void Initialize(GridManager gridManager)
     {
         _gridManager = gridManager;
+        _minigameEnabled = false;
         resourceStation.OnUseEndEvent.AddListener(OnUseEnd);
+        resourceStation.SetFinishEvents(ActiveUses);
     }
 
     public void LoadAndStart(EnvironmentEntity entity, int index)
@@ -30,7 +34,6 @@ public class MinigameManager : MonoBehaviour
         if (_entity.minigamePrefab != null) _minigamePrefab = Instantiate(_entity.minigamePrefab, _spawnPlace.transform, false);
 
         _entity.minigameEvents.OnResourceLoad(resourceStation, this);
-        UseResource();
     }
 
     public void Unload()
@@ -46,9 +49,10 @@ public class MinigameManager : MonoBehaviour
 
     public void UseResource()
     {
-        if (_entity == null) return;
+        if (_entity == null || _minigameEnabled) return;
 
-        _uses -= _uses;
+        _uses -= 1;
+        _minigameEnabled = true;
         _entity.minigameEvents.OnResourceUse(resourceStation);
     }
 
@@ -60,6 +64,11 @@ public class MinigameManager : MonoBehaviour
             _entity.minigameEvents.OnResourceDestroy(this); // que llame a la reaparicion
             Unload();
         }
+    }
+
+    private void ActiveUses()
+    {
+        _minigameEnabled = false;
     }
 
     public GameObject GetResourceInstance()

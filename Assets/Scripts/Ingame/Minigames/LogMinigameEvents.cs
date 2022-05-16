@@ -18,7 +18,7 @@ public class LogMinigameEvents : MinigameEvents
     public override void OnResourceUnload(ResourceStation resourceStation)
     {
         Debug.Log("Vuelve pronto!");
-        resourceStation.StopAllCoroutines();
+        resourceStation.CancelEvents();
         resourceStation.gameObject.SetActive(false);
     }
 

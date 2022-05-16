@@ -37,8 +37,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - Minigame
+  - HiddenMinigame
   m_SortingLayers:
   - name: Default
     uniqueID: 0

@@ -12,6 +12,6 @@ public class SavedWorldDecision : Decision
 
     private bool SavedWorld(WorldStateController controller)
     {
-        return controller.VillagesCount > 0;
+        return controller.worldData.aliveVillages > 0;
     }
 }

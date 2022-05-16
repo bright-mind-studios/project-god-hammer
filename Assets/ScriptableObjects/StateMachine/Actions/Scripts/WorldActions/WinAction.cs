@@ -7,11 +7,14 @@ public class WinAction : Action
 {
     public override void Act(BaseStateController controller)
     {
-        Win(controller);
+        Win((WorldStateController)controller);
     }
 
-    private void Win(BaseStateController controller)
+    private void Win(WorldStateController controller)
     {
+        if (controller.stateBoolVariable) return;
 
+        Debug.Log("VICTORY: "+controller.worldData.aliveVillages+" VILLAGE/S OF "+controller.worldData.difficulty.villagesAmount+" SURVIVED");
+        controller.stateBoolVariable = true;
     }
 }

@@ -39,6 +39,22 @@ public class SnoppyVillage : MonoBehaviour
     {
         bool requestEnabled = _controller.currentState.name.Equals("Surviving");
         transform.GetChild(2).gameObject.SetActive(requestEnabled);
+
+        if (_controller.currentState.name.Equals("Death"))
+        {
+            _minigameBar.lifes.text = "X";
+            _minigameBar.level.text = "Destruida";
+        } 
+        else if (_controller.currentState.name.Equals("Protected"))
+        {
+            _minigameBar.level.text = "Protegida";
+            _minigameBar.lifes.text = _controller.villageData.lives.ToString();
+        }
+        else
+        {
+            _minigameBar.level.text = _controller.villageData.fortificationLevel.ToString();
+            _minigameBar.lifes.text = _controller.villageData.lives.ToString();
+        }
     }
 
     private void SnoppyQuest()
