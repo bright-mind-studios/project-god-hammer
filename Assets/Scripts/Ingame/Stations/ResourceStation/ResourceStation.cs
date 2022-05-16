@@ -70,4 +70,14 @@ public class ResourceStation : MonoBehaviour
         OnUseEndEvent?.Invoke();
     }
 
+    [ContextMenu("cancel")]
+    public void CancelEvents()
+    {
+        woodLog.HideInstant();
+        metalRock.HideInstant();
+        StopAllCoroutines();
+        base_tf.rotation = Quaternion.AngleAxis(0, Vector3.up);       
+
+    }
+
 }

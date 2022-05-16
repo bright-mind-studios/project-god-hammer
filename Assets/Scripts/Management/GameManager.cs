@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Utils;
 public class GameManager : Singleton<GameManager>
 {
@@ -13,10 +14,11 @@ public class GameManager : Singleton<GameManager>
         base.Init();
         settings = new GameSettings();
     }
+
+    public void SetSettings(DifficultyData d, IntensityData i) => settings = new GameSettings{difficulty = d, intensity = i};
     public void LoadGame()
     {
-        Debug.Log("Aquí empezaría el juego");
-        // Nueva partida
+        SceneManager.LoadScene(1);
     }
 
     public void ExitGame() => Application.Quit();

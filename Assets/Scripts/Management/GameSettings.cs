@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class GameSettings
 {
-    // Configuración de las partidas
+    public DifficultyData difficulty;
+    public IntensityData intensity;
 }
