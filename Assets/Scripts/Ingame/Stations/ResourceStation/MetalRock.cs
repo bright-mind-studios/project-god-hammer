@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Tweening;
+using UnityEngine.Events;
 
 public class MetalRock : MonoBehaviour
 {
@@ -21,6 +22,8 @@ public class MetalRock : MonoBehaviour
 
     private List<GameObject> ores_spawned;
 
+    public UnityEvent OnFinishEvent;
+
     private void Start() {
         mesh = GetComponent<MeshFilter>().mesh;
         ores_spawned = new List<GameObject>();
@@ -31,11 +34,12 @@ public class MetalRock : MonoBehaviour
     {
         Start();
         Clear();
+        gameObject.layer = 30;
         for (int i = 0; i < num_ores; i++)
         {
             GenerateMetalOre();
         } 
-        StartCoroutine(move(hide_point.position, show_point.position));
+        StartCoroutine(move(hide_point.position, show_point.position, false));
     }
 
 
@@ -43,7 +47,7 @@ public class MetalRock : MonoBehaviour
     public void hide()
     {
         Clear();
-        StartCoroutine(move(show_point.position, hide_point.position));
+        StartCoroutine(move(show_point.position, hide_point.position, true));
     }
     
     private void Clear()
@@ -75,7 +79,7 @@ public class MetalRock : MonoBehaviour
         ores_spawned.Add(m);
     }
 
-    public IEnumerator move(Vector3 startPos, Vector3 finalPos)
+    public IEnumerator move(Vector3 startPos, Vector3 finalPos, bool finished)
     {
         transform.position = startPos;
         var current_time = 0f;
@@ -86,13 +90,19 @@ public class MetalRock : MonoBehaviour
             var t = delta * current_time;
             transform.position = TweenUtils.SmoothLerp(startPos, finalPos, t);
             yield return null;
-        }        
+        }
+        if (finished)
+        {
+            gameObject.layer = 31;
+            OnFinishEvent?.Invoke();
+        }
     }
 
     public void HideInstant()
     {
         StopAllCoroutines();
         Clear();
+        gameObject.layer = 31;
         transform.position = hide_point.position;
     }
 }

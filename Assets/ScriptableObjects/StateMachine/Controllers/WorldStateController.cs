@@ -44,7 +44,10 @@ public class WorldStateController : BaseStateController
         {
             villageController.InitializeStateMachine(true);
         }
+    }
 
+    public void StartGame()
+    {
         InitializeStateMachine(true);
     }
 

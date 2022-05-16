@@ -1,9 +1,11 @@
+using System.Collections;
 using UnityEngine;
 
 public class WorldManager : MonoBehaviour
 {
     public DifficultyData difficulty;
     public IntensityData intensity;
+    [SerializeField][Range(1, 60)] private int _secondsToStart = 30; 
     [SerializeField] private WorldStateController _controller;
     [SerializeField] private GridManager _gridManager;
     [SerializeField] private GridMovement _gridMovement;
@@ -29,6 +31,8 @@ public class WorldManager : MonoBehaviour
         _mapSnapping.Initialize(mapCellSize, _gridManager.WorldRadius, _map.transform);
         _gridMovement.Initialize(_gridManager, _mapSnapping, _minigameManager);
         _gridManager.LoadEntitiesIcons(_mapSnapping);
+
+        StartCoroutine(StartGame());
     }
 
     private float ComputeMapCellSize(int cellSize)
@@ -37,5 +41,16 @@ public class WorldManager : MonoBehaviour
         Vector3 mapDimensions = mapMesh.bounds.size;
         int worldSize = _gridManager.WorldRadius * 2 + 1;
         return mapDimensions.x * cellSize * 0.2f / worldSize;
+    }
+
+    public IEnumerator StartGame()
+    {
+        var current_time = 0f;
+        while (current_time < _secondsToStart)
+        {
+            current_time += Time.deltaTime;
+            yield return null;
+        }
+        _controller.StartGame();
     }
 }

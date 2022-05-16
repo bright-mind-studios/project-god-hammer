@@ -13,12 +13,11 @@ GameObject:
   - component: {fileID: 3875436741816336845}
   m_Layer: 5
   m_Name: Image
-
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3875436741816336843
 RectTransform:
   m_ObjectHideFlags: 0
@@ -588,8 +587,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4287500039
-  m_fontColor: {r: 0.028880388, g: 0.05917636, b: 0.5566038, a: 1}
+    rgba: 4280595187
+  m_fontColor: {r: 0.9528302, g: 0.69880563, b: 0.13932894, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
