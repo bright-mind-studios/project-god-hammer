@@ -913,13 +913,13 @@ MonoBehaviour:
   btn_play: {fileID: 1828443411}
   btn_back: {fileID: 2114638553}
   intensityDatas:
-  - {fileID: 11400000, guid: f5865410b30b231408b6382ad64097fc, type: 2}
   - {fileID: 11400000, guid: 4c376a511515a854bac1df2cabbf204a, type: 2}
   - {fileID: 11400000, guid: ea239bf6f9cd6204c8c345297053bb77, type: 2}
+  - {fileID: 11400000, guid: f5865410b30b231408b6382ad64097fc, type: 2}
   difficultyDatas:
   - {fileID: 11400000, guid: aa3d6183fa7bc4146a741b19897dfd78, type: 2}
-  - {fileID: 11400000, guid: 3ec19247cdfda8944890f4891ab598b8, type: 2}
   - {fileID: 11400000, guid: eacb0a0a7d45353408b46c6831cd94ec, type: 2}
+  - {fileID: 11400000, guid: 3ec19247cdfda8944890f4891ab598b8, type: 2}
   selected_intensity: 0
   selected_difficulty: 0
 --- !u!224 &158244725
