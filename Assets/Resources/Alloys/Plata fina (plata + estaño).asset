@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f31552598a39a62468bd757b86355f92, type: 3}
   m_Name: "Plata fina (plata + esta\xF1o)"
   m_EditorClassIdentifier: 
-  itemname: Peltre
+  itemname: Plata fina
   prefab: {fileID: 8387612514793452275, guid: 1c574804f7300cd4486548724bf77c91, type: 3}
   sprite: {fileID: -825315993686582386, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   primaryMetal: {fileID: 11400000, guid: 389de5b4b5308124b94424ca4d483aeb, type: 2}
