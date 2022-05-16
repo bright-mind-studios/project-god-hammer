@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Tweening;
-
 public class WoodLog : MonoBehaviour
 {
     [SerializeField] LogMarker marker;
@@ -36,5 +35,12 @@ public class WoodLog : MonoBehaviour
             transform.position = TweenUtils.SmoothLerp(startPos, finalPos, t);
             yield return null;
         }        
+    }
+
+    public void HideInstant()
+    {
+        StopAllCoroutines();
+        marker.gameObject.SetActive(false);
+        transform.position = hide_point.position;
     }
 }

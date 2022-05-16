@@ -45,8 +45,6 @@ public class MetalRock : MonoBehaviour
         Clear();
         StartCoroutine(move(show_point.position, hide_point.position));
     }
-
-
     
     private void Clear()
     {
@@ -89,5 +87,12 @@ public class MetalRock : MonoBehaviour
             transform.position = TweenUtils.SmoothLerp(startPos, finalPos, t);
             yield return null;
         }        
+    }
+
+    public void HideInstant()
+    {
+        StopAllCoroutines();
+        Clear();
+        transform.position = hide_point.position;
     }
 }
