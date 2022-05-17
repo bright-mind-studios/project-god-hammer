@@ -519,6 +519,9 @@ MonoBehaviour:
   show_point: {fileID: 4624704794968284438}
   hide_point: {fileID: 4624704794897911453}
   animation_time: 2
+  OnFinishEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6442376534240526890
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +690,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 908916606995508818, guid: 735b4326eb6c62c4b9ef3de0f0b65d85, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967236
+      objectReference: {fileID: 0}
     - target: {fileID: 908916606995508820, guid: 735b4326eb6c62c4b9ef3de0f0b65d85, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.18709242
@@ -739,6 +746,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pickaxe Kit
       objectReference: {fileID: 0}
+    - target: {fileID: 5723433621982543360, guid: 735b4326eb6c62c4b9ef3de0f0b65d85, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 4624704796202164154}
     - target: {fileID: 7452387031795983735, guid: 735b4326eb6c62c4b9ef3de0f0b65d85, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -979,9 +990,17 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 4624704796202164154}
+    - target: {fileID: 1653173935307976918, guid: 53dbbf269cb89f94c8d57efb41192d15, type: 3}
+      propertyPath: fireWoodItemPrefab
+      value: 
+      objectReference: {fileID: 2060929482443746579, guid: 6305f8b2a8b9f8c4ba6c66b7dd7777d8, type: 3}
     - target: {fileID: 7587946411577086192, guid: 53dbbf269cb89f94c8d57efb41192d15, type: 3}
       propertyPath: m_Name
       value: Axe kit
+      objectReference: {fileID: 0}
+    - target: {fileID: 7726429248099490013, guid: 53dbbf269cb89f94c8d57efb41192d15, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 4294967236
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53dbbf269cb89f94c8d57efb41192d15, type: 3}

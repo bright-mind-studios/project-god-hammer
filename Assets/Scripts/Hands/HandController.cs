@@ -9,11 +9,20 @@ public class HandController : MonoBehaviour
     [SerializeField] InputActionReference actionPinch;
     private Animator handAnimator;
     private void Awake()
-    {
-        actionGrip.action.performed += GripPress;
-        actionPinch.action.performed += TriggerPress;
+    {        
         handAnimator = GetComponent<Animator>();
     }
+
+    private void OnEnable() {
+        actionGrip.action.performed += GripPress;
+        actionPinch.action.performed += TriggerPress;
+    }
+
+    private void OnDisable() {
+        actionGrip.action.performed -= GripPress;
+        actionPinch.action.performed -= TriggerPress;
+    }
+
     private void GripPress(InputAction.CallbackContext obj)
     {
         handAnimator.SetFloat("Grip", obj.ReadValue<float>());

@@ -15,6 +15,10 @@ public class WinAction : Action
         if (controller.stateBoolVariable) return;
 
         Debug.Log("VICTORY: "+controller.worldData.aliveVillages+" VILLAGE/S OF "+controller.worldData.difficulty.villagesAmount+" SURVIVED");
+
+        GameManager.Instance.SetResults(true, controller.worldData.aliveVillages, controller.worldData.difficulty.villagesAmount);
+        GameManager.Instance.LoadResults();
+
         controller.stateBoolVariable = true;
     }
 }

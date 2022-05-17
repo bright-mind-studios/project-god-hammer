@@ -12635,8 +12635,8 @@ ConfigurableJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: -1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: -1.25, y: 0.125, z: -0.5}
+  m_AutoConfigureConnectedAnchor: 0
+  m_ConnectedAnchor: {x: 15.687501, y: 6.18875, z: 14.577502}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -12649,7 +12649,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.2
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -13399,8 +13399,8 @@ ConfigurableJoint:
   m_ConnectedArticulationBody: {fileID: 0}
   m_Anchor: {x: 0, y: -1, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
-  m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 1.25, y: 0.125, z: -0.5}
+  m_AutoConfigureConnectedAnchor: 0
+  m_ConnectedAnchor: {x: 15.687501, y: 6.18875, z: 14.577502}
   serializedVersion: 2
   m_SecondaryAxis: {x: 0, y: 1, z: 0}
   m_XMotion: 0
@@ -13413,7 +13413,7 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LinearLimit:
-    limit: 0.2
+    limit: 0.1
     bounciness: 0
     contactDistance: 0
   m_AngularXLimitSpring:
@@ -14448,6 +14448,7 @@ GameObject:
   - component: {fileID: 3828051745869988536}
   - component: {fileID: 3828051745869988539}
   - component: {fileID: 3828051745869988538}
+  - component: {fileID: 1774735790239128433}
   m_Layer: 0
   m_Name: Controlador L
   m_TagString: Untagged
@@ -14534,6 +14535,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1774735790239128433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3828051745869988540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd60502929e13e14fb5b331828a62149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 3828051745678298096}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &3828051745895772387
 GameObject:
   m_ObjectHideFlags: 0
@@ -15556,6 +15571,7 @@ GameObject:
   - component: {fileID: 3828051746083753468}
   - component: {fileID: 3828051746083753471}
   - component: {fileID: 3828051746083753470}
+  - component: {fileID: 3207650277183245089}
   m_Layer: 0
   m_Name: Controlador R
   m_TagString: Untagged
@@ -15642,6 +15658,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3207650277183245089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3828051746083753456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd60502929e13e14fb5b331828a62149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joint: {fileID: 3828051745724087039}
+  offset: {x: 0, y: 0, z: 0}
 --- !u!1 &3828051746085129007
 GameObject:
   m_ObjectHideFlags: 0

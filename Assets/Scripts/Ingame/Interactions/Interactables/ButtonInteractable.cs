@@ -11,19 +11,20 @@ public class ButtonInteractable : TouchInteractable
     private Vector3 starPos; 
     [SerializeField] private Transform target;
 
-    private float offset = 0.01f;
+    private float offset = 0.5f;
 
     protected override void Init()
     {
-        starPos = target.position;
+        starPos = target.localPosition;
     }
 
-    public override void OnHoverEnter(HoverEnterEventArgs args){
-        target.position = starPos + Vector3.down * offset;
+    public override void OnHoverEnter(HoverEnterEventArgs args)
+    {
+        target.localPosition = starPos + Vector3.down * offset;
         OnPressButton?.Invoke();
     }
 
     public override void OnHoverExit(HoverExitEventArgs args){
-       target.position = starPos;
+       target.localPosition = starPos;
     }
 }
