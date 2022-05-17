@@ -13,13 +13,20 @@ MonoBehaviour:
   m_Name: Hacha
   m_EditorClassIdentifier: 
   points:
-  - {x: -0.85, y: -0.85, z: 0}
-  - {x: 0.85, y: -0.85, z: 0}
+  - {x: 0.8, y: 0, z: 0}
+  - {x: 0.6, y: 0.2, z: 0}
   - {x: 0.85, y: 0.85, z: 0}
-  - {x: -0.85, y: 0.85, z: 0}
+  - {x: 0.2, y: 0.85, z: 0}
+  - {x: 0.5, y: 0.2, z: 0}
+  - {x: -0.85, y: 0.2, z: 0}
+  - {x: -0.85, y: -0.2, z: 0}
+  - {x: 0.5, y: -0.2, z: 0}
+  - {x: 0.2, y: -0.85, z: 0}
+  - {x: 0.85, y: -0.85, z: 0}
+  - {x: 0.6, y: -0.2, z: 0}
+  - {x: 0.8, y: 0, z: 0}
   moldPrefab: {fileID: 6812032845723455840, guid: 69aed7f7eb4ddab4ea53193b52b96cb4, type: 3}
   weaponPrefab: {fileID: 8223655097084462367, guid: a1a5a35e26869e844a8cf4fa40f131fc, type: 3}
   spr_base: {fileID: 4831603870484749984, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   spr_M1: {fileID: -4964077069603403539, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   spr_M2: {fileID: -756319078620440616, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
-

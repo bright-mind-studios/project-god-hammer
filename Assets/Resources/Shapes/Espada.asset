@@ -13,13 +13,22 @@ MonoBehaviour:
   m_Name: Espada
   m_EditorClassIdentifier: 
   points:
-  - {x: -0.85, y: -0.85, z: 0}
-  - {x: 0.85, y: -0.85, z: 0}
-  - {x: 0.85, y: 0.85, z: 0}
-  - {x: -0.85, y: 0.85, z: 0}
+  - {x: 0.85, y: -0.4, z: 0}
+  - {x: 0.85, y: 0.4, z: 0}
+  - {x: 0.5, y: 0.5, z: 0}
+  - {x: 0.5, y: 0.85, z: 0}
+  - {x: 0.2, y: 0.85, z: 0}
+  - {x: 0.2, y: 0.55, z: 0}
+  - {x: -0.4, y: 0.7, z: 0}
+  - {x: -0.85, y: 0, z: 0}
+  - {x: -0.4, y: -0.7, z: 0}
+  - {x: 0.2, y: -0.55, z: 0}
+  - {x: 0.2, y: -0.85, z: 0}
+  - {x: 0.5, y: -0.85, z: 0}
+  - {x: 0.5, y: -0.5, z: 0}
+  - {x: 0.85, y: -0.4, z: 0}
   moldPrefab: {fileID: 3279243169530976423, guid: dde652f49573e2146b300928b890d703, type: 3}
   weaponPrefab: {fileID: 7272324366909938306, guid: db0cfbb988d48944f937b16153449014, type: 3}
   spr_base: {fileID: 1337178263016185502, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   spr_M1: {fileID: -3688721136760069919, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   spr_M2: {fileID: -5821473696794878636, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
-

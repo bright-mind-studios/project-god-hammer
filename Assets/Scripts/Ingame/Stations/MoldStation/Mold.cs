@@ -25,6 +25,7 @@ public class Mold : MonoBehaviour
     
     private void OnEnable() 
     {
+        lineRenderer.positionCount = CurrentShape.Length;
         lineRenderer.SetPositions(CurrentShape);
         ResetShape();
     }
@@ -32,6 +33,7 @@ public class Mold : MonoBehaviour
     public void SwapShape()
     {
         currentShapeIdx = (currentShapeIdx + 1) % shapes.Count;
+        lineRenderer.positionCount = CurrentShape.Length;
         lineRenderer.SetPositions(CurrentShape);
         UpdateMarkerPosition();
     }

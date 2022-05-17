@@ -13,13 +13,25 @@ MonoBehaviour:
   m_Name: Mazo
   m_EditorClassIdentifier: 
   points:
-  - {x: -0.85, y: -0.85, z: 0}
-  - {x: 0.85, y: -0.85, z: 0}
-  - {x: 0.85, y: 0.85, z: 0}
-  - {x: -0.85, y: 0.85, z: 0}
+  - {x: 0.75, y: -0.2, z: 0}
+  - {x: 0.75, y: 0.2, z: 0}
+  - {x: 0.65, y: 0.2, z: 0}
+  - {x: 0.65, y: 0.75, z: 0}
+  - {x: 0.1, y: 0.75, z: 0}
+  - {x: 0.1, y: 0.2, z: 0}
+  - {x: -0.4, y: 0.2, z: 0}
+  - {x: -0.4, y: 0.4, z: 0}
+  - {x: -0.7, y: 0.4, z: 0}
+  - {x: -0.7, y: -0.4, z: 0}
+  - {x: -0.4, y: -0.4, z: 0}
+  - {x: -0.4, y: -0.2, z: 0}
+  - {x: 0.1, y: -0.2, z: 0}
+  - {x: 0.1, y: -0.75, z: 0}
+  - {x: 0.65, y: -0.75, z: 0}
+  - {x: 0.65, y: -0.2, z: 0}
+  - {x: 0.75, y: -0.2, z: 0}
   moldPrefab: {fileID: 6234441701062659630, guid: 9baab16320e1ba2459bf2306a1872efe, type: 3}
   weaponPrefab: {fileID: 527138702709204076, guid: 00068825e30feec4f8c9c1c196f22eb3, type: 3}
   spr_base: {fileID: 825882728112384563, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   spr_M1: {fileID: -8469729539942362180, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
   spr_M2: {fileID: 1962445879206003282, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
-

@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using static UnityEngine.InputSystem.InputAction;
 
 [RequireComponent(typeof(LineRenderer))]
 public class MoldCutterInteractable : GrabInteractable
@@ -10,6 +12,8 @@ public class MoldCutterInteractable : GrabInteractable
     [SerializeField] private Mold mold;
     [SerializeField] private LayerMask raycastMask;
     [SerializeField] private float maxdistance = 4f;
+    [SerializeField] InputActionReference actionTriggerRight;
+    [SerializeField] InputActionReference actionTriggerLeft;
     [SerializeField] Transform marker;
 
     private void Start() 
@@ -17,13 +21,31 @@ public class MoldCutterInteractable : GrabInteractable
         InitBeam();
     }
 
-    public override void OnTriggerStart()
+    protected override void OnEnable() 
     {
+        base.OnEnable();
+        actionTriggerRight.action.started += TriggerStart;
+        actionTriggerRight.action.canceled += TriggerEnd;
+        actionTriggerLeft.action.started += TriggerStart;
+        actionTriggerLeft.action.canceled += TriggerEnd;    
+    }
+
+    protected override void OnDisable() {
+        base.OnEnable();
+        actionTriggerRight.action.started -= TriggerStart;
+        actionTriggerRight.action.canceled -= TriggerEnd;
+        actionTriggerLeft.action.started -= TriggerStart;
+        actionTriggerLeft.action.canceled -= TriggerEnd;    
+    }
+
+    public void TriggerStart(CallbackContext _)
+    {
+        Debug.Log("AAA");
         base.OnTriggerStart();
         rayRenderer.enabled = true;
     }
 
-    public override void OnTriggerEnd()
+    public void TriggerEnd(CallbackContext _)
     {
         base.OnTriggerEnd();
         rayRenderer.enabled = false;
@@ -32,7 +54,7 @@ public class MoldCutterInteractable : GrabInteractable
 
     private void Update() {
         if(rayRenderer.enabled)
-        {           
+        {                       
             if(Physics.Raycast(transform.position, -transform.up, out RaycastHit hit, maxdistance, raycastMask)){    
                 mold.OnCutterHit(hit.point);
                 Vector3 collisionPoint = transform.InverseTransformPoint(hit.point);
