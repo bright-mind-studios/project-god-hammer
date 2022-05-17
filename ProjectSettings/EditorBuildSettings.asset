@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/World_FSM_testing.unity
     guid: da8c104f589f2c54cbce1a50a677f6bd
+  - enabled: 1
+    path: Assets/Scenes/Resultados.unity
+    guid: 030c2c807158ba44da09eca732ed2f89
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 83ae59938ce6fa042a37268ca60c8946, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 2a9c468b0625ae643a8e6abd7e5a6b32, type: 2}
