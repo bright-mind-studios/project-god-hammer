@@ -7,7 +7,7 @@ public class Axe : MonoBehaviour
     public float neededSpeed = 1.0f;
     private Rigidbody rb;
 
-    [SerializeField] private FireWoodItem fireWoodItemPrefab;
+    [SerializeField] private GameObject fireWoodItemPrefab;
     [SerializeField] private Transform spawnPoint;
     private void Start() {
         rb = GetComponent<Rigidbody>();
