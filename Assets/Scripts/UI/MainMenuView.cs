@@ -11,7 +11,7 @@ public class MainMenuView : View
 
     public override void Init()
     {
-        btn_jugar.onClick.AddListener(GameManager.Instance.LoadGame);
+        btn_jugar.onClick.AddListener(() => controller.Show<GameView>());
         btn_opciones.onClick.AddListener(() => controller.Show<OptionsView>());
         btn_salir.onClick.AddListener(GameManager.Instance.ExitGame);
     }

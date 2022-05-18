@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5c439a17d05394469e11a63f7df2baf, type: 3}
+  m_Name: Village
+  m_EditorClassIdentifier: 
+  name: Village
+  resourceProvider: 1
+  requireResourceStation: 0
+  terrainModifier: 0
+  spawnChance: 1
+  localScale: {x: 0.5, y: 0.2, z: 0.5}
+  localPosition: {x: 0.55, y: 0, z: -1.84}
+  prefab: {fileID: 5353600119847181726, guid: 476abfdce21789d448306ee546497b43, type: 3}
+  minigamePrefab: {fileID: 5353600119847181726, guid: 306112f39d000264d821a34030926c22, type: 3}
+  minigameEvents: {fileID: 3392067534824806788, guid: 62f562f22ee0d1148935b0c6aac24f76, type: 3}
+  resourceUses: -1
+  mapSprite: {fileID: 3947061164568741086, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - MinimapCamera
+  - DefaultTerrain
   layers:
   - Default
   - TransparentFX
@@ -16,6 +18,19 @@ TagManager:
   - Body
   - Bubble
   - Spoon
+
+  - Mold
+  - lever
+  - Pickaxe
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Minimap
+  - MinimapGrid
+  - MinimapGridIndicator
   - 
   - 
   - 
@@ -23,20 +38,8 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Minigame
+  - HiddenMinigame
   m_SortingLayers:
   - name: Default
     uniqueID: 0

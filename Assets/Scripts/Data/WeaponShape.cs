@@ -5,5 +5,22 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "WeaponShape", menuName = "project-god-hammer/WeaponShape", order = 4)]
 public class WeaponShape : ScriptableObject
 {
-    public List<Vector2> points;
+    public Vector3[] points;
+    public GameObject moldPrefab;
+    public GameObject weaponPrefab;
+
+    public Sprite spr_base, spr_M1, spr_M2;
+
+    [ContextMenu("RenderShape")]
+    public void RenderShape()
+    {
+        for (int i = 0; i < points.Length; i++)
+        {
+            var a = points[i];
+            var b = points[(i + 1) % points.Length];
+            Debug.DrawLine(a, b, Color.white, 5f);
+        }
+    }
+
+
 }

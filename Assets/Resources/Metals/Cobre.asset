@@ -14,5 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemname: Cobre
   prefab: {fileID: 0}
-  sprite: {fileID: 0}
-  tier: 0
+  sprite: {fileID: -6247109869272520733, guid: 4c827becdb454d6409cd8dc8b2b8fdf7, type: 3}
+  tier: 1
+  color: {r: 0.6981132, g: 0.38765705, b: 0.24038802, a: 1}
