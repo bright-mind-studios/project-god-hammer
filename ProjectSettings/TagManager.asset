@@ -15,9 +15,10 @@ TagManager:
   - UI
   - Grabable
   - Teleportable
-  - 
-  - 
-  - 
+  - Body
+  - Bubble
+  - Spoon
+
   - Mold
   - lever
   - Pickaxe

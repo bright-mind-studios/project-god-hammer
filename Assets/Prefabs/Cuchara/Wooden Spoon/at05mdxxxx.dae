@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <created>2018-01-24T22:27:42Z</created>
+    <modified>2018-01-24T22:27:42Z</modified>
+  </asset>
+  <library_images>
+    <image id="Image">
+      <init_from>./at05_hera.png</init_from>
+    </image>
+  </library_images>
+  <library_materials>
+    <material id="VisualMaterial" name="hera">
+      <instance_effect url="#Effect"/>
+      <extra>
+        <technique profile="FCOLLADA">
+          <user_properties>hera</user_properties>
+        </technique>
+      </extra>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="Effect" name="at05_hera_png">
+      <profile_COMMON>
+        <newparam sid="Image-surface">
+          <surface type="2D">
+            <init_from>Image</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="Image-sampler">
+          <sampler2D>
+            <source>Image-surface</source>
+            <wrap_s>WRAP</wrap_s>
+            <wrap_t>WRAP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="common">
+          <phong>
+            <emission>
+              <color>0 0 0 1</color>
+            </emission>
+            <ambient>
+              <color>0 0 0 1</color>
+            </ambient>
+            <diffuse>
+              <texture texture="Image-sampler" texcoord=""/>
+            </diffuse>
+            <specular>
+              <color>1 1 1 1</color>
+            </specular>
+            <shininess>
+              <float>0</float>
+            </shininess>
+            <transparent opaque="A_ONE">
+              <color>0 0 0 1</color>
+            </transparent>
+            <transparency>
+              <float>1</float>
+            </transparency>
+            <index_of_refraction>
+              <float>1.55</float>
+            </index_of_refraction>
+          </phong>
+          <extra>
+            <technique profile="FCOLLADA">
+              <spec_level>
+                <float>0</float>
+              </spec_level>
+            </technique>
+          </extra>
+        </technique>
+      </profile_COMMON>
+      <extra>
+        <technique profile="FCOLLADA">
+          <user_properties>at05_hera.png</user_properties>
+        </technique>
+      </extra>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="Geometry" name="mesh_0_hera_model">
+      <mesh>
+        <source id="GeometrySource" name="mesh_0_hera_modelPos">
+          <float_array id="GeometrySource-array" count="246">-9.43456 -1.56636 54.3489 -9.43456 -1.99726 47.9795 -2.83034 -1.56636 52.3331 -15.5576 -1.99727 48.8685 -3.58715 -1.19511 55.1031 -16.0388 -1.56636 55.5714 -5.4862 -1.02854 56.6574 -14.5909 -1.19511 58.0383 -9.43456 -1.02854 58.2116 -12.1161 -1.02854 58.8058 -3.31154 -1.99727 46.6407 -13.7162 -1.56634 40.6636 -9.43456 -1.56635 40.1828 -5.21043 0.049075 56.9659 -2.20744 -0.488857 52.3331 -3.03562 -0.117499 55.4117 -15.1029 -0.117499 58.3468 -16.1351 -0.919661 48.8685 -16.6617 -0.48885 55.5714 -9.43456 0.049076 58.5201 -5.15292 -1.56634 39.6725 -2.73404 -0.919657 46.6407 -4.74909 -0.488842 39.6725 -14.12 -0.488842 40.6636 -12.2622 -0.56134 35.3999 -12.3721 0.049076 59.1144 -6.60689 -0.56134 35.3999 -12.5289 0.516151 35.3999 -9.43456 -0.56134 35.3999 -11.4462 0.516148 26.5804 -11.2728 -0.561344 26.5804 -6.3402 0.516151 35.3999 -12.2622 -0.561268 -13.5939 -12.5289 0.516315 -13.9595 -7.59636 -0.561344 26.5804 -9.43456 -0.561344 26.5804 -7.42297 0.516148 26.5804 -9.43456 -0.561279 -15.363 -9.43456 0.516308 -15.7286 -6.60689 -0.561268 -13.5939 -6.3402 0.516315 -13.9595 -9.43456 1.61746 35.3999 -6.60689 1.61746 35.3999 -7.59636 1.61746 26.5804 -5.15292 0.612461 39.6725 -9.43456 1.61746 26.5804 -9.43456 0.612455 40.1828 -11.2728 1.61746 26.5804 -13.7162 0.61246 40.6636 -12.2622 1.61746 35.3999 -7.42297 0.516148 26.5804 -6.3402 0.516151 35.3999 -12.2622 1.61755 -13.5939 -6.60689 1.61755 -13.5939 -9.43456 1.61757 -15.363 -15.5576 0.181528 48.8685 -3.31154 0.181532 46.6407 -9.43456 0.18153 47.9795 -11.4462 0.516148 26.5804 -12.5289 0.516151 35.3999 -4.74909 -0.488842 39.6725 -6.3402 0.516315 -13.9595 -12.5289 0.516315 -13.9595 -9.43456 0.516308 -15.7286 -16.0388 0.612446 55.5714 -14.12 -0.488842 40.6636 -16.6617 -0.48885 55.5714 -16.1351 -0.919661 48.8685 -2.73404 -0.919657 46.6407 -2.83034 0.612453 52.3331 -2.20744 -0.488857 52.3331 -15.1029 -0.117499 58.3468 -9.43456 0.391622 54.0882 -14.5909 0.983688 58.0383 -3.03562 -0.117499 55.4117 -12.3721 0.049076 59.1144 -3.58715 0.983686 55.1031 -12.1161 1.15026 58.8058 -5.4862 1.15026 56.6574 -9.43456 1.15026 58.2116 -9.43456 0.049076 58.5201 -5.21043 0.049075 56.9659</float_array>
+          <technique_common>
+            <accessor source="#GeometrySource-array" count="82" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GeometrySource1" name="mesh_0_hera_modelNrm">
+          <float_array id="GeometrySource1-array" count="246">0.018258 -0.996671 0.079458 0 -1 -0.000001 0.191383 -0.977966 0.083397 -0.178498 -0.983838 -0.014173 0.337645 -0.886913 0.315247 -0.205529 -0.973455 0.100716 0.238654 -0.819645 0.520795 -0.20584 -0.891554 0.403437 0.17001 -0.823524 0.541207 0.019883 -0.845229 0.534034 0.169239 -0.985166 -0.028389 -0.205985 -0.969225 -0.13481 -0.0066 -0.995485 -0.094693 0.459822 0.006706 0.887986 0.999569 0.002838 0.029227 0.852441 0.014775 0.522615 -0.672494 0.014543 0.73996 -0.987452 -0.016239 -0.157084 -0.996044 0.003315 0.088802 0.294029 0.000078 0.955797 0.174066 -0.972871 -0.152391 0.982876 -0.019035 -0.183285 0.955871 -0.005112 -0.293743 -0.968583 -0.004548 -0.24865 -0.340418 -0.926935 -0.157818 -0.067135 0.006967 0.99772 0.317302 -0.933398 -0.167596 -0.983798 0.012581 -0.17884 -0.0066 -0.995485 -0.094693 -1 -0.000009 -0.000199 -0.375248 -0.926924 0.000068 0.981227 0.013163 -0.192409 -0.360371 -0.932724 -0.012588 -0.998156 0.000472 -0.060701 0.375248 -0.926924 0.000068 0 -1 -0.000001 1 -0.00001 -0.000199 0 -0.998448 -0.055693 0 0.00045 -1 0.360371 -0.932724 -0.012588 0.998156 0.000471 -0.060701 0.003964 0.998154 0.060603 0.421213 0.906808 -0.016677 0.382348 0.924019 0.000071 0.402957 0.914971 -0.021295 0 1 0.000001 0.013854 0.994032 0.108206 -0.382348 0.924019 0.000071 -0.404247 0.914416 -0.020695 -0.427341 0.903905 -0.018347 1 -0.00001 -0.000199 0.981227 0.013163 -0.192409 -0.366324 0.930399 -0.012854 0.366324 0.930399 -0.012854 0 0.998385 -0.056801 -0.339796 0.938027 -0.068149 0.318766 0.945641 -0.064429 0 1 0.000001 -1 -0.000009 -0.000199 -0.983798 0.012581 -0.17884 0.955871 -0.005112 -0.293743 0.998156 0.000471 -0.060701 -0.998156 0.000472 -0.060701 0 0.00045 -1 -0.338335 0.940545 -0.030084 -0.968583 -0.004548 -0.24865 -0.996044 0.003315 0.088802 -0.987452 -0.016239 -0.157084 0.982876 -0.019035 -0.183285 0.266214 0.961958 -0.06137 0.999569 0.002838 0.029227 -0.672494 0.014543 0.73996 -0.01574 0.997291 -0.071858 -0.239708 0.955123 0.174011 0.852441 0.014775 0.522615 -0.067135 0.006967 0.99772 0.278922 0.95733 0.075641 -0.019143 0.947964 0.3178 0.1771 0.933976 0.310361 0.10948 0.932883 0.343137 0.294029 0.000078 0.955797 0.459822 0.006706 0.887986</float_array>
+          <technique_common>
+            <accessor source="#GeometrySource1-array" count="82" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="GeometrySource2" name="mesh_0_hera_modelUV">
+          <float_array id="GeometrySource2-array" count="164">0.747512 0.083476 0.747512 0.165839 0.936966 0.109543 0.571861 0.154343 0.915255 0.073722 0.558058 0.067668 0.831383 0.053624 0.591771 0.031889 0.747512 0.033527 0.669642 0.032708 0.923162 0.183152 0.624685 0.260441 0.747512 0.26666 0.839294 0.038463 0.9749 0.109543 0.931076 0.058561 0.577083 0.016728 0.536691 0.154343 0.520123 0.067668 0.747512 0.018366 0.870338 0.273258 0.958333 0.183152 0.905265 0.273258 0.589758 0.260441 0.666395 0.328507 0.662297 0.017547 0.828628 0.328507 0.62968 0.328507 0.747512 0.328507 0.668693 0.442553 0.694779 0.442553 0.865344 0.328507 0.666395 0.944439 0.626267 0.958364 0.800244 0.442553 0.747512 0.442553 0.82633 0.442553 0.747512 0.967315 0.747512 0.98124 0.828628 0.944439 0.868756 0.958364 0.251125 0.328507 0.332241 0.328507 0.303857 0.442553 0.373951 0.273258 0.251125 0.442553 0.251125 0.26666 0.198392 0.442553 0.128298 0.260441 0.170008 0.328507 0.329943 0.442553 0.368957 0.328507 0.170008 0.944439 0.332241 0.944439 0.251125 0.967315 0.075473 0.154343 0.426775 0.183152 0.251125 0.165839 0.172306 0.442553 0.133293 0.328507 0.408878 0.273258 0.372369 0.958364 0.12988 0.958364 0.251125 0.98124 0.06167 0.067668 0.09337 0.260441 0.023736 0.067668 0.040303 0.154343 0.461946 0.183152 0.440579 0.109543 0.478513 0.109543 0.080695 0.016728 0.251125 0.083476 0.095384 0.031889 0.434689 0.058561 0.16591 0.017547 0.418868 0.073722 0.173255 0.032708 0.334996 0.053624 0.251125 0.033527 0.251125 0.018366 0.342907 0.038463</float_array>
+          <technique_common>
+            <accessor source="#GeometrySource2-array" count="82" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="Geometry-vertices">
+          <input semantic="POSITION" source="#GeometrySource"/>
+          <input semantic="NORMAL" source="#GeometrySource1"/>
+          <input semantic="TEXCOORD" source="#GeometrySource2"/>
+        </vertices>
+        <triangles material="VisualMaterial0" count="124">
+          <input semantic="VERTEX" source="#Geometry-vertices" offset="0"/>
+          <p>0 1 2 0 3 1 0 2 4 0 5 3 0 4 6 0 7 5 0 6 8 0 9 7 0 8 9 1 10 2 1 3 11 1 12 10 1 11 12 4 13 6 4 2 14 4 15 13 4 14 15 5 7 16 5 17 3 5 16 18 5 18 17 6 13 19 8 19 9 8 6 19 10 12 20 21 14 2 10 21 2 10 22 21 10 20 22 11 3 23 3 17 23 11 23 24 11 24 12 25 9 19 7 25 16 7 9 25 20 12 26 20 26 22 24 23 27 12 28 26 24 28 12 24 27 29 24 29 30 24 30 28 22 26 31 29 32 30 29 33 32 28 34 26 30 32 35 28 30 35 28 35 34 31 26 36 26 34 36 32 37 35 33 37 32 33 38 37 35 37 39 34 39 36 34 35 39 40 39 37 38 40 37 40 36 39 41 42 43 41 44 42 41 43 45 41 46 44 41 45 47 41 48 46 41 49 48 41 47 49 42 50 43 42 44 51 42 51 50 45 52 47 45 43 53 43 50 53 45 53 54 45 54 52 46 48 55 46 56 44 46 55 57 46 57 56 49 47 58 47 52 58 49 58 59 49 59 48 51 44 60 44 56 60 61 53 50 54 53 61 54 62 52 62 58 52 54 63 62 54 61 63 55 64 57 65 48 59 55 48 65 55 66 64 55 65 67 55 67 66 56 68 60 56 57 69 56 69 70 56 70 68 64 66 71 64 72 57 57 72 69 64 71 73 64 73 72 70 69 74 71 75 73 72 76 69 69 76 74 73 75 77 72 73 77 72 78 76 72 77 79 72 79 78 79 77 80 77 75 80 79 80 78 81 78 80 76 81 74 76 78 81</p>
+        </triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_controllers>
+    <controller id="Controller">
+      <skin source="#Geometry">
+        <bind_shape_matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</bind_shape_matrix>
+        <source id="Controller-joints">
+          <Name_array id="Controller-joints-array" count="1">hera_model</Name_array>
+          <technique_common>
+            <accessor source="#Controller-joints-array" count="1" stride="1">
+              <param name="JOINT" type="Name"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Controller-bind_poses">
+          <float_array id="Controller-bind_poses-array" count="16">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</float_array>
+          <technique_common>
+            <accessor source="#Controller-bind_poses-array" count="1" stride="16">
+              <param name="TRANSFORM" type="float4x4"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="Controller-weights">
+          <float_array id="Controller-weights-array" count="1">1</float_array>
+          <technique_common>
+            <accessor source="#Controller-weights-array" count="1" stride="1">
+              <param name="WEIGHT" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <joints>
+          <input semantic="JOINT" source="#Controller-joints"/>
+          <input semantic="INV_BIND_MATRIX" source="#Controller-bind_poses"/>
+        </joints>
+        <vertex_weights count="82">
+          <input semantic="JOINT" source="#Controller-joints" offset="0"/>
+          <input semantic="WEIGHT" source="#Controller-weights" offset="1"/>
+          <vcount>1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 </vcount>
+          <v>0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0</v>
+        </vertex_weights>
+      </skin>
+      <extra>
+        <technique profile="FCOLLADA">
+          <user_properties>SkinController</user_properties>
+        </technique>
+      </extra>
+    </controller>
+  </library_controllers>
+  <library_visual_scenes>
+    <visual_scene id="VisualSceneNode" name="rdmscene">
+      <node id="VisualSceneNode1" name="hera_model" sid="hera_model" type="JOINT">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+      </node>
+      <node id="VisualSceneNode2" name="mesh_0_hera_model" type="NODE">
+        <matrix>1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_controller url="#Controller">
+          <skeleton>#VisualSceneNode1</skeleton>
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="VisualMaterial0" target="#VisualMaterial"/>
+            </technique_common>
+          </bind_material>
+        </instance_controller>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#VisualSceneNode"/>
+  </scene>
+</COLLADA>
