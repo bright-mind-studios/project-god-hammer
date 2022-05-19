@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f31552598a39a62468bd757b86355f92, type: 3}
-  m_Name: Osmo (plata + m.impuro)
+  m_Name: osmo (plata + m.impuro)
   m_EditorClassIdentifier: 
   itemname: Osmo
   prefab: {fileID: 8387612514793452275, guid: 1c574804f7300cd4486548724bf77c91, type: 3}
