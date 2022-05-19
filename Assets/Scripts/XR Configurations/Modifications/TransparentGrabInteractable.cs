@@ -12,8 +12,8 @@ public class TransparentGrabInteractable : OffsetGrabInteractable
         base.OnSelectEntered(interactor);
         EnableMapGrid();
         SetObjectTransparency();
-        interactorRenderer = FindAndStoreInteractorMaterial(interactor);
-        SetInteractorTransparency();
+        //interactorRenderer = FindAndStoreInteractorMaterial(interactor);
+        //SetInteractorTransparency();
     }
 
     private void EnableMapGrid()
@@ -56,7 +56,7 @@ public class TransparentGrabInteractable : OffsetGrabInteractable
         base.OnSelectExited(interactor);
         DisableMapGrid();
         ResetObjectTransparency();
-        ResetInteractorMaterial();
+        //ResetInteractorMaterial();
     }
 
     private void DisableMapGrid()
