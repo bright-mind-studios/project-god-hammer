@@ -7,10 +7,13 @@ public class Axe : MonoBehaviour
     public float neededSpeed = 1.0f;
     private Rigidbody rb;
 
+    private AudioSource _audioSource;
+
     [SerializeField] private GameObject fireWoodItemPrefab;
     [SerializeField] private Transform spawnPoint;
     private void Start() {
         rb = GetComponent<Rigidbody>();
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void OnCollisionEnter(Collision other) {
@@ -18,6 +21,8 @@ public class Axe : MonoBehaviour
         if (Vector3.Magnitude(rb.velocity) < neededSpeed)
             return;
 
+        _audioSource.Play();
+        
         LogMarker marker = other.gameObject.GetComponent<LogMarker>();
         if(marker != null)
         {

@@ -14,7 +14,13 @@ public class LiveAction : Action
     {
         if (controller.stateBoolVariable) return;
 
-        // Put quietly sound
+        AudioSource audioSource = controller.GetComponent<AudioSource>();
+        audioSource.Stop();
+        audioSource.volume = 1;
+        audioSource.clip = controller.audioClips[1];
+        audioSource.loop = true;
+        audioSource.Play();
+        
         controller.armourBar.SetSecondsOfArmour(controller.worldController.worldData.difficulty.secondsPerSection * controller.villageData.fortificationLevel);
         controller.stateBoolVariable = true;
     }
