@@ -11,6 +11,8 @@ public class VillageStateController : BaseStateController
     [HideInInspector] public ArmourBar armourBar;
     [HideInInspector] public Quest currentQuest;
 
+    public List<AudioClip> audioClips;
+
 
     public override void InitializeStateMachine(bool activate)
     {

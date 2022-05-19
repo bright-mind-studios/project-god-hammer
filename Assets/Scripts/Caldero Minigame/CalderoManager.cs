@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class CalderoManager : MonoBehaviour
 {
-    private bool _minigameStarted, _nextFase;
+    private bool _nextFase;
     public int _progressFase;
 
     public Transform fase1, fase2, fase3, fase4, fase5;
@@ -18,9 +18,10 @@ public class CalderoManager : MonoBehaviour
     public List<Transform> bubblesFase4 = new List<Transform>();
     public List<Transform> bubblesFase5 = new List<Transform>();
 
+    [SerializeField] private CauldronStation _cauldronStation;
+
     private void Awake()
     {
-        _minigameStarted = false;
         _nextFase = false;
         _progressFase = 0;
 
@@ -32,12 +33,6 @@ public class CalderoManager : MonoBehaviour
 
         bubblesFase2.Reverse();
         bubblesFase4.Reverse();
-    }
-
-    private void Update()
-    {
-        if (!_minigameStarted)
-            StartCoroutine(ShowBubbles());
     }
 
     private List<Transform> GetAllChilds(Transform _t)
@@ -59,10 +54,14 @@ public class CalderoManager : MonoBehaviour
     {
         _progressFase++;
     }
+    
+    public void StartCauldronMinigame()
+    {
+        StartCoroutine(ShowBubbles());
+    }
 
     private IEnumerator ShowBubbles()
     {
-        _minigameStarted = true;
         var timeBetweenBubblesF1 = new WaitForSeconds(0.3f);
         var timeBetweenBubblesF2 = new WaitForSeconds(0.2f);
         var timeBetweenBubblesF3 = new WaitForSeconds(0.1f);
@@ -169,7 +168,7 @@ public class CalderoManager : MonoBehaviour
 
         _progressFase = 0;
 
-        //_minigameStarted = false;
+        _cauldronStation.OnWin();
     }
 
     bool CheckFaseComplete([NotNull] List<Transform> bubblesFase)
@@ -177,6 +176,5 @@ public class CalderoManager : MonoBehaviour
         if (bubblesFase == null) throw new ArgumentNullException(nameof(bubblesFase));
         return bubblesFase.All(bubble => !bubble.gameObject.activeInHierarchy);
     }
-
 
 }

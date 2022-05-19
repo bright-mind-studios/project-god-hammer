@@ -12,11 +12,16 @@ public class ConcernAction : Action
 
     private void Concern(VillageStateController controller)
     {
-        // Make a call to world petition generating system
-        // Send the petition generated to world list
-        // Generate trigger for weapon
-        // Change music to attack state
+        AudioSource audioSource = controller.GetComponent<AudioSource>();
+        audioSource.Stop();
+        audioSource.volume = 1;
+        audioSource.clip = controller.audioClips[2];
+        audioSource.Play();
+        audioSource.loop = false;
+
         Debug.Log("Generating Weapon");
         controller.currentQuest = FindObjectOfType<QuestGenerator>().GenerateQuest(controller.villageData.fortificationLevel);
+        
+        
     }
 }
