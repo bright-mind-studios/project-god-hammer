@@ -19,7 +19,7 @@ public class SurviveAction : Action
             if (!audioSource.isPlaying)
             {
                 audioSource.clip = controller.audioClips[0];
-                audioSource.volume = 0.5f;
+                audioSource.volume = 0.2f;
                 audioSource.Play();
                 audioSource.loop = true;
                 controller.stateBoolVariable = true;

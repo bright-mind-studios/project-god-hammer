@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   villagesAmount: 1
   armouredSections: 2
-  secondsPerSection: 120
+  secondsPerSection: 420
   failRateMultiplier: 0
