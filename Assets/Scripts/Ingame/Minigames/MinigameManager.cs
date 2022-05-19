@@ -20,7 +20,8 @@ public class MinigameManager : MonoBehaviour
         _gridManager = gridManager;
         _minigameEnabled = false;
         resourceStation.OnUseEndEvent.AddListener(OnUseEnd);
-        resourceStation.SetFinishEvents(ActiveUses);
+        resourceStation.SetWoodFinishEvents(ActiveUses1);
+        resourceStation.SetRockFinishEvents(ActiveUses2);
     }
 
     public void LoadAndStart(EnvironmentEntity entity, int index)
@@ -66,7 +67,12 @@ public class MinigameManager : MonoBehaviour
         }
     }
 
-    private void ActiveUses()
+    private void ActiveUses1()
+    {
+        _minigameEnabled = false;
+    }
+    
+    private void ActiveUses2()
     {
         _minigameEnabled = false;
     }

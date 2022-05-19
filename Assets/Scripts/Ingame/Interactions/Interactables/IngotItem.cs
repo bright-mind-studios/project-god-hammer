@@ -10,8 +10,8 @@ public class IngotItem : ResourceItem
     public void SetMetal(Element element){
         mpb = new MaterialPropertyBlock();
         this.resource = element;
-        mpb.SetColor("Color 1", element.GetPrimaryColor());
-        mpb.SetColor("Color 2", element.GetSecondaryColor());
+        mpb.SetColor("Color_1", element.GetPrimaryColor());
+        mpb.SetColor("Color_2", element.GetSecondaryColor());
         GetComponentInChildren<Renderer>().SetPropertyBlock(mpb);            
     }
 }

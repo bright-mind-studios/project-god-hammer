@@ -37,10 +37,14 @@ public class ResourceStation : MonoBehaviour
         StartCoroutine(WoodLogEvent());
     }
 
-    public void SetFinishEvents(UnityAction action)
+    public void SetWoodFinishEvents(UnityAction action)
+    {
+        woodLog.OnFinishEvent.AddListener(action);
+    }
+    
+    public void SetRockFinishEvents(UnityAction action)
     {
         metalRock.OnFinishEvent.AddListener(action);
-        woodLog.OnFinishEvent.AddListener(action);
     }
 
     private IEnumerator MetalRockEvent()
