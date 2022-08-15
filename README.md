@@ -18,6 +18,15 @@ There're differents minigames that in the game such as: cutting wood, getting mi
 <a href="https://youtu.be/09mRhufZSgw"><img src="https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/project_god_hammer_explanation_cover.jpg" style="height: 50%; 
 width:50%;"/></a>
 
+### Screenshots
+
+![1](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_02.jpeg)
+![2](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_04.jpeg)
+![3](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_05.jpeg)
+![4](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_06.jpeg)
+![5](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_07.jpeg)
+
+
 ### For more information and projects, you can check out our GitHub profiles
 
 [![Web](https://img.shields.io/badge/GitHub-Relegends-9b854b?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/Relegends)
