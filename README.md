@@ -20,12 +20,14 @@ width:50%;"/></a>
 
 ### Screenshots
 
-![1](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_02.jpeg)
-![2](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_04.jpeg)
-![3](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_05.jpeg)
-![4](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_06.jpeg)
-![5](https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_07.jpeg)
-
+<p float="left">
+  <img src="https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_02.jpeg" width="25%"/>
+  <img src="https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_04.jpeg" width="25%"/>
+  <img src="https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_05.jpeg" width="25%"/>
+  <img src="https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_06.jpeg" width="25%"/>
+  <img src="https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_07.jpeg" width="25%"/>
+  <img src="https://raw.githubusercontent.com/mrzabbah/mrzabbah/master/Project-God-Hammer/project_god_hammer_screenshot_01.jpg" width="25%"/>
+</p>
 
 ### For more information and projects, you can check out our GitHub profiles
 
