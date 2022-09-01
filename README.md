@@ -5,7 +5,7 @@ Project God Hammer is a VR game prototype made for a school project.
 
 In this game, you're a god who has to aid his people from their invaders. In order to accomplish this task, you need to create the weapons that the villages ask before it's too late!
 
-There're differents minigames that in the game such as: cutting wood, getting minerals, crafting the weapons while you follow their pattern or coocking them to increase their level!
+There're differents minigames that in the game such as: cutting wood, getting minerals, crafting the weapons while you follow their pattern or cooking them to increase their level!
 
 ### Minimum requirements
 [![Unity](https://img.shields.io/badge/Unity-2021.3-318787?longCache=true&style=flat-square)](https://unity3d.com/get-unity/download)
